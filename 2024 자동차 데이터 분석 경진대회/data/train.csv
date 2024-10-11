@@ -1,0 +1,22 @@
+﻿ID,lang,title,notes,target
+TRAIN_00,de,Steuerbarer Umsatz aus Lieferungen und Leistungen in Flensburg,"Steuern, Finanzen, Öffentlicher Dienst - Steuern - Umsatzsteuerstatistik (Voranmeldungen) - Steuerbarer Umsatz aus Lieferungen und Leistungen in Flensburg 
+Zum HTML-Angebot der Zeitreihe
+Regionaldaten für Schleswig-Holstein
+Statistisches Amt für Hamburg und Schleswig-Holstein",0
+TRAIN_01,kr,도로교통공단_고속도로구간별 도로위험도지수정보 조회 서비스,"고속도로명, 고속도로구간명과 차종코드를 이용하여 구간 내의 도로위험도지수값, 도로위험도등급 등의 구간좌표별 실시간 도로위험도지수정보를 제공하는 서비스",1
+TRAIN_02,en,New registrations of road vehicles by vehicle group and type,"This dataset presents the monthly data of new registrations of road vehicles (passenger cars, passenger vehicles, goods vehicles, agricultural vehicles, industrial vehicles, motorcycles, trailers) by canton and fuel, since 2005.",1
+TRAIN_03,de,Siedlungs- und Verkehrsflächen nach Nutzungsartengruppen in Böxlund,"Gebiet, Fläche - Gebiet - Siedlungs- und Verkehrsflächen nach Nutzungsartengruppen in Böxlund 
+Zum HTML-Angebot der Zeitreihe
+Regionaldaten für Schleswig-Holstein
+Statistisches Amt für Hamburg und Schleswig-Holstein",1
+TRAIN_04,en,Marine Geophysical and Seismic Data from around the UK (1966 Onwards),"The British Geological Survey hold a collection of data recorded during marine geophysical surveys which includes digital data and analogue records. These data result from approximately 350,000 line kilometres of multi-instrument geophysical survey lines. The data include seismic, sonar, magnetic, gravity, echo sounder, multibeam bathymetry and navigation data. The seismic data are mainly for airgun, sparker, boomer and pinger. The data were primarily collected by BGS and the collection also includes additional third party data. The data are primarily from the UKCS (United Kingdom Continental Shelf). The data are stored within the National Geoscience Data Centre (NGDC) and the Marine Environmental Data and Information Network (MEDIN) Data Archive Centre (DAC) for Geology and Geophysics. The majority of legacy geophysical paper records are available as scanned images viewable via the BGS Offshore GeoIndex www.bgs.ac.uk/GeoIndex/offshore.htm. Other records can be scanned on request. Older records are of variable quality. Data not yet available online including segy are available on request enquiries@bgs.ac.uk. The data are applicable to a wide range of uses including environmental, geotechnical, geophysical and geological studies. Reference: Fannin, NGT. (1989) Offshore Investigations 1966-87. British Geological Survey Technical Report WB/89/2, British Geological Survey.",0
+TRAIN_05,en,Truck Size and Weight Enforcement Data,"This dataset consists of truck size and weight enforcement data including number of trucks weighed, number of violations, and number of oversize/overweight permits, as reported by the States in their annual certification to FHWA.",1
+TRAIN_06,kr,고속도로 교통사고 데이터,교통사고 정보,1
+TRAIN_07,de,"Bevölkerung nach Geschlecht, Altersgruppen und höchstem beruflichen Bildungsabschluss","Definition:
+Es werden die höchsten beruflichen Bildungsabschlüsse der Bevölkerung betrachtet. Personen, die sich noch im Bildungssystem befinden – also Auszubildende, Schülerinnen, Schüler und Studierende – gehen dabei nicht in die Analysen ein.
+Datenquelle:
+IT.NRW, Mikrozensus",0
+TRAIN_08,kr,한국교통안전공단_대중교통 기상상태별 이용인원,"대중교통 기상상태별 이용인원 및 통행량에 관한 데이터정보 (맑은 날, 강설, 강우 등)입니다.단위는 명, 통행 입니다.",1
+TRAIN_09,kr,경기도 양평군_고령인구현황,"2022년 양평군 노인들을 대상으로 노인복지 사각복지를 파악하기 위해서 설문조사를 실시해서 얻은 데이터
+설문에 응답하지 않는 문항의 값은 -1",0
+TRAIN_10,es,"Tasas de actividad, empleo y paro por tipo de municipio. (A partir de 2017) (Identificador API: /t22/p320/base_2015/serie/l0/03003.px)","Tasas de actividad, empleo y paro por tipo de municipio. (A partir de 2017). Nacional. Estadística del Empleo de las Personas con Discapacidad",0
