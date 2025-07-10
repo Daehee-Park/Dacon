@@ -1,0 +1,18 @@
+{
+  "best_method": "Individual Models - XGBoost",
+  "best_cv_f1": 0.486974695013821,
+  "goal_achieved": false,
+  "best_threshold": 0.47999999999999976,
+  "threshold_f1": 0.48707070707070704,
+  "predicted_positive_rate": 0.12453467232274262,
+  "all_results": {
+    "Individual Models - LightGBM": 0.48682744129074473,
+    "Individual Models - XGBoost": 0.486974695013821,
+    "Individual Models - CatBoost": 0.486974695013821,
+    "Ensemble Methods - Soft Voting": 0.486974695013821,
+    "Ensemble Methods - Stacking": 0.48677797112586535,
+    "Ensemble Methods - Weighted Ensemble": 0.486974695013821,
+    "Feature Engineering - Enhanced XGBoost": 0.48695049952643127
+  },
+  "feature_count": 28
+}

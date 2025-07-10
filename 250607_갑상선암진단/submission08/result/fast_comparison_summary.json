@@ -1,0 +1,10 @@
+{
+  "original_features": 28,
+  "optimized_features": 25,
+  "feature_reduction": "10.7%",
+  "best_model_overall": "LightGBM",
+  "best_f1_overall": 0.4815246658799648,
+  "best_data_type": "original",
+  "models_evaluated": 12,
+  "successful_evaluations": 24
+}

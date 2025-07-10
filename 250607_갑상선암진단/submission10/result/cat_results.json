@@ -1,0 +1,22 @@
+{
+  "model_name": "CatBoost",
+  "cv_f1_mean": 0.4872,
+  "cv_f1_std": 0.0036,
+  "threshold": 0.504,
+  "best_params": {
+    "iterations": 1196,
+    "learning_rate": 0.02563053297948684,
+    "depth": 6,
+    "l2_leaf_reg": 1.073735362702601,
+    "random_strength": 5.734856048140002,
+    "border_count": 186,
+    "bagging_temperature": 0.40095596968204394,
+    "objective": "Logloss",
+    "random_state": 42,
+    "verbose": false,
+    "auto_class_weights": "Balanced"
+  },
+  "goal_achieved": true,
+  "optuna_best_value": 0.4872,
+  "n_trials": 100
+}
