@@ -1,4 +1,4 @@
-ID,Smiles
+ID,smiles
 TEST_000,CC(C)n1cnnc1c2cccc(n2)N3C=Cc4ccc(Br)cc4C3=O
 TEST_001,C[C@H](CO)n1cnnc1c2cccc(n2)N3C=Cc4ccc(Br)cc4C3=O
 TEST_002,C[C@H](CO)n1cnnc1c2cccc(n2)N3C=Cc4cc(Br)ccc4C3=O

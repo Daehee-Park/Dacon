@@ -1,0 +1,39 @@
+{
+  "ExtraTrees": {
+    "n_estimators": 209,
+    "max_depth": 13,
+    "min_samples_split": 8,
+    "min_samples_leaf": 10,
+    "max_features": "sqrt",
+    "bootstrap": false
+  },
+  "XGBoost": {
+    "n_estimators": 1776,
+    "max_depth": 4,
+    "learning_rate": 0.023062198993080093,
+    "subsample": 0.8886718923723549,
+    "colsample_bytree": 0.6140804201571932,
+    "reg_alpha": 11.67880071676264,
+    "reg_lambda": 4.717384543331914,
+    "min_child_weight": 6,
+    "gamma": 4.907733162801539
+  },
+  "LightGBM": {
+    "n_estimators": 1888,
+    "max_depth": 3,
+    "learning_rate": 0.06689803456800028,
+    "subsample": 0.7865166289153955,
+    "colsample_bytree": 0.6507058306023363,
+    "reg_alpha": 9.60094498713036,
+    "reg_lambda": 2.843912281880322,
+    "min_child_samples": 5
+  },
+  "CatBoost": {
+    "iterations": 1846,
+    "depth": 4,
+    "learning_rate": 0.1067016246769795,
+    "subsample": 0.7135908868030736,
+    "colsample_bylevel": 0.8242151533767006,
+    "l2_leaf_reg": 9.509112247749393
+  }
+}
