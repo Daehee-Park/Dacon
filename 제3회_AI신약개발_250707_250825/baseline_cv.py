@@ -151,7 +151,7 @@ test_predictions_ic50 = pIC50_to_IC50(test_predictions_pic50)
 # Create submission file
 submission = pd.DataFrame({
     'ID': test_df['ID'],
-    'IC50_nM': test_predictions_ic50
+    'ASK1_IC50_nM': test_predictions_ic50
 })
 
 submission.to_csv('output/baseline_cv_submission.csv', index=False)
