@@ -674,12 +674,14 @@ try:
     models = {}
     model_scores = {}
     model_predictions = {}
+    fold_predictions = {}  # fold별 예측 저장
 
     for model_name, params in models_params.items():
         print(f"\n9.{list(models_params.keys()).index(model_name)+1} {model_name} 학습 및 평가")
         
         cv_scores = []
         cv_preds = np.zeros(len(y))
+        fold_preds = []  # 각 fold의 예측 저장
         
         for fold, (train_idx, val_idx) in enumerate(cv_folds):
             X_train, X_val = X_selected[train_idx], X_selected[val_idx]
@@ -706,6 +708,7 @@ try:
             # 예측
             y_pred = model.predict(X_val)
             cv_preds[val_idx] = y_pred
+            fold_preds.append((val_idx, y_pred))  # fold별 예측 저장
             
             # 평가
             y_val_ic50 = pIC50_to_IC50(y_val)
@@ -731,6 +734,7 @@ try:
             'oof_score': final_score
         }
         model_predictions[model_name] = cv_preds
+        fold_predictions[model_name] = fold_preds  # fold별 예측 저장
         
         print(f"  CV Mean: {np.mean(cv_scores):.4f} ± {np.std(cv_scores):.4f}")
         print(f"  OOF Score: {final_score:.4f}")
@@ -739,20 +743,47 @@ try:
     print("\n10. 앙상블")
     print("-" * 50)
 
-    # 단순 평균 앙상블
-    ensemble_pred = np.mean([pred for pred in model_predictions.values()], axis=0)
+    # 각 fold별로 앙상블 성능 계산
+    ensemble_cv_scores = []
+    ensemble_oof_preds = np.zeros(len(y))
     
+    for fold, (train_idx, val_idx) in enumerate(cv_folds):
+        # 해당 fold의 각 모델 예측 수집
+        fold_model_preds = []
+        for model_name in models_params.keys():
+            # 해당 fold의 예측 찾기
+            for fold_idx, fold_pred in fold_predictions[model_name]:
+                if np.array_equal(fold_idx, val_idx):
+                    fold_model_preds.append(fold_pred)
+                    break
+        
+        # 앙상블 예측 (단순 평균)
+        ensemble_fold_pred = np.mean(fold_model_preds, axis=0)
+        ensemble_oof_preds[val_idx] = ensemble_fold_pred
+        
+        # 해당 fold 성능 계산
+        y_val = y[val_idx]
+        y_val_ic50 = pIC50_to_IC50(y_val)
+        ensemble_fold_pred_ic50 = pIC50_to_IC50(ensemble_fold_pred)
+        
+        norm_rmse, corr_sq, fold_score = calculate_metrics(y_val_ic50, ensemble_fold_pred_ic50, y_val, ensemble_fold_pred)
+        ensemble_cv_scores.append(fold_score)
+        
+        print(f"  Ensemble Fold {fold+1}: {fold_score:.4f}")
+    
+    # 전체 OOF 성능
     y_ic50 = pIC50_to_IC50(y)
-    ensemble_pred_ic50 = pIC50_to_IC50(ensemble_pred)
-    norm_rmse, corr_sq, ensemble_score = calculate_metrics(y_ic50, ensemble_pred_ic50, y, ensemble_pred)
+    ensemble_oof_ic50 = pIC50_to_IC50(ensemble_oof_preds)
+    norm_rmse, corr_sq, ensemble_oof_score = calculate_metrics(y_ic50, ensemble_oof_ic50, y, ensemble_oof_preds)
     
     model_scores['Ensemble'] = {
-        'cv_mean': ensemble_score,
-        'cv_std': 0.0,
-        'oof_score': ensemble_score
+        'cv_mean': np.mean(ensemble_cv_scores),
+        'cv_std': np.std(ensemble_cv_scores),
+        'oof_score': ensemble_oof_score
     }
 
-    print(f"Ensemble OOF Score: {ensemble_score:.4f}")
+    print(f"  Ensemble CV Mean: {np.mean(ensemble_cv_scores):.4f} ± {np.std(ensemble_cv_scores):.4f}")
+    print(f"  Ensemble OOF Score: {ensemble_oof_score:.4f}")
 
     # 11. 최종 예측
     print("\n11. 최종 예측")
@@ -807,12 +838,22 @@ try:
         test_pred = model.predict(X_test_selected)
         test_predictions[model_name] = test_pred
     
-    # 앙상블 예측
+    # 앙상블 예측도 추가
     ensemble_test_pred = np.mean([pred for pred in test_predictions.values()], axis=0)
+    test_predictions['Ensemble'] = ensemble_test_pred
     
-    # IC50로 변환
-    test_ic50_pred = pIC50_to_IC50(ensemble_test_pred)
+    # Best CV model 선택 (CV_Score 기준)
+    best_model_name = max(model_scores.items(), key=lambda x: x[1]['cv_mean'])[0]
+    print(f"Best CV model: {best_model_name} (CV_Score: {model_scores[best_model_name]['cv_mean']:.4f})")
     
+    # Best CV model 예측 사용
+    if best_model_name == 'Ensemble':
+        test_ic50_pred = pIC50_to_IC50(ensemble_test_pred)
+    else:
+        test_ic50_pred = pIC50_to_IC50(test_predictions[best_model_name])
+    
+    print(f"선택된 모델: {best_model_name}")
+
     # 12. 결과 저장
     print("\n12. 결과 저장")
     print("-" * 50)
@@ -828,8 +869,8 @@ try:
         for name, scores in model_scores.items()
     ])
     
-    results_df = results_df.sort_values('OOF_Score', ascending=False)
-    print("\n성능 요약:")
+    results_df = results_df.sort_values('CV_Score', ascending=False)  # CV_Score 기준으로 정렬
+    print("\n성능 요약 (CV_Score 기준):")
     print(results_df.to_string(index=False))
     
     results_df.to_csv('output/try3/model_performance.csv', index=False)
@@ -843,6 +884,7 @@ try:
     save_config(CFG, 'output/try3/config.json')
     
     print(f"\n제출 파일 생성 완료: output/try3/submission.csv")
+    print(f"사용된 모델: {best_model_name}")
     print(f"예측값 범위: {test_ic50_pred.min():.2f} ~ {test_ic50_pred.max():.2f} nM")
 
 except Exception as e:
