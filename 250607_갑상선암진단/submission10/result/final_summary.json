@@ -1,0 +1,28 @@
+{
+  "best_model": "LightGBM",
+  "best_f1_score": 0.4872,
+  "best_f1_std": 0.0036,
+  "best_threshold": 0.628,
+  "goal_achieved_count": 3,
+  "total_models": 3,
+  "all_results": {
+    "LightGBM": {
+      "f1_mean": 0.4872,
+      "f1_std": 0.0036,
+      "threshold": 0.628,
+      "goal_achieved": true
+    },
+    "XGBoost": {
+      "f1_mean": 0.4871,
+      "f1_std": 0.0036,
+      "threshold": 0.486,
+      "goal_achieved": true
+    },
+    "CatBoost": {
+      "f1_mean": 0.4872,
+      "f1_std": 0.0036,
+      "threshold": 0.504,
+      "goal_achieved": true
+    }
+  }
+}

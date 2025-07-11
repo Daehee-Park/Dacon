@@ -1,0 +1,11 @@
+{
+  "high_correlation_removed": [
+    "Family_Background",
+    "Family_Background_binary",
+    "Weight_Risk_Not Obese"
+  ],
+  "correlation_threshold": 0.95,
+  "original_features": 28,
+  "final_features": 25,
+  "reduction_ratio": 0.10714285714285714
+}

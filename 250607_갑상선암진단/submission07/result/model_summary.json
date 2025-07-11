@@ -1,0 +1,21 @@
+{
+  "best_dataset": "common_features",
+  "best_model": "LightGBM",
+  "best_features": 27,
+  "cv_f1_mean": 0.4808314151552687,
+  "cv_f1_std": 0.003615008731113398,
+  "cv_auc_mean": 0.7025387962219286,
+  "tuned_f1": 0.4869503085636403,
+  "final_train_f1": 0.19656534709344514,
+  "final_train_auc": 0.7369968130352667,
+  "best_threshold": 0.1,
+  "threshold_f1": 0.490613266583229,
+  "best_params": {
+    "n_estimators": 357,
+    "learning_rate": 0.010289299241433902,
+    "num_leaves": 13,
+    "feature_fraction": 0.875832258047273,
+    "bagging_fraction": 0.5277727709119462,
+    "min_child_samples": 15
+  }
+}

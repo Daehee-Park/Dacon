@@ -1,0 +1,188 @@
+system,user
+"You are an AI assistant tasked with classifying data entries as automotive-related (1) or not automotive-related (0). Based solely on the 'lang', 'title', and 'notes' provided, determine the correct label for each entry. There are exactly 40 entries to classify. Please output only the final answers as '0' or '1', one per line, corresponding to each entry in the order presented. Do not include any additional text, explanations, or blank lines.","lang: en
+title: Beach Profile Data Collected from Madeira Beach, Florida (January 15, 2021)
+notes: This dataset, prepared by the U.S. Geological Survey (USGS) St. Petersburg Coastal and Marine Science Center (SPCMSC), provides beach profile data collected at Madeira Beach, Florida. Data were collected on foot by a person equipped with a Global Positioning System (GPS) antenna affixed to a backpack outfitted for surveying location and elevation data (XYZ) along pre-determined transects. The horizontal position data are given in the Universal Transverse Mercator (UTM) projected coordinate system, Zone 17 North (17N), referenced to the North American Datum of 1983 (NAD 83); the elevation data are referenced to the North American Vertical Datum of 1988 (NAVD 88), GEOID12B.
+--
+lang: en
+title: Nota media de la nota de admisión (cohorte de nuevo ingreso en el SUE) por forma de admisión, ámbito de estudio y sexo (universidades públicas presenciales)
+notes: Tabla de EDUCAbase Nota media de la nota de admisión (cohorte de nuevo ingreso en el SUE) por forma de admisión, ámbito de estudio y sexo (universidades públicas presenciales). Indicadores de los NO beneficiarios de becas generales de la AGE y País Vasco en estudios de Grado. Resultados por universidad. Anual.
+--
+lang: en
+title: Internet-based platform services 2019 according to various criteria
+notes: nan
+--
+lang: kr
+title: 경상남도 김해시_자동차등록 현황
+notes: 경상남도 김해시 자동차등록 현황에 대한 데이터로 연도별 총계, 승용차, 승합차, 화물차, 특수차의 등록수를 제공하고 있습니다
+--
+lang: jp
+title: EV用充電設備の設置状況データ一覧
+notes: 【東京都環境局】2021年3月末時点の都内におけるEV用充電設備の情報です。【リソース】EV用充電設備の設置状況データ一覧 / 2021年3月末時点の都内におけるEV用充電設備の情報です。
+--
+lang: kr
+title: 경기아트센터 장애인기업 생산제품 구매 현황
+notes: 경기아트센터에서 제공하는 장애인기업 생산 제품 구매 현황
+--
+lang: de
+title: Autohaus
+notes: Weitere Informationen: https://wiki.openstreetmap.org/wiki/DE:Tag:shop%3Dcar. Diese Ressource wurde automatisch generiert, melden Sie sich bitte bei Fehlern oder Fragen.
+--
+lang: kr
+title: 2021년 농식품부 국가안전대진단 실행계획
+notes: 국가안전대진단은 세월호 참사 이후 2015년부터 각종 재난발생이 우려되는 시설에 대한 집중 안전점검과 국민들의 안전 실천 생활화를 위해 범국가적으로 매년 시행하는 재난 사전 예방 활동
+--
+lang: kr
+title: 경기도 성남시_교통단속 카메라 파일데이터
+notes: 경기도 성남시 교통단속 카메라 openAPI 서비스에서 제공하는 데이터를 다운 받을 수 있도록 파일 (CSV,SHP,Image) 데이터를 제공합니다.
+--
+lang: kr
+title: 영화 관람 데이터
+notes: ㅇ 데이터 소개
+- 영화진흥위원회가 운영하는 KOBIS 영화관입장권통합전산망 데이터
+- 전국 광역자치단체 별 주 단위의 영화 매출금액과 관람객 수, 상영편 수, 개봉 건 수에 대한 데이터를 제공한다.
+ㅇ 활용분야
+- 각 지역별 영화 관람 활성화 지표에 대한 비교분석이 가능하다.
+- 영화 관람객, 매출 등을 활용하여, 문화시설에 대한 분석 및 기획에 활용한다.
+ㅇ 데이터 출처
+- 영화진흥위원회 KOBIS 지역별 통계 정보
+--
+lang: kr
+title: 인천광역시_차로폭 차로수 현황
+notes: 인천광역시에서 유지관리하는 도로에 관한 데이터로 도로명, 도로폭, 도로연장, 도로면적, 기점, 총점 등의 항목을 제공합니다.
+--
+lang: kr
+title: (1월) 차량용 GPS Raw Data(PND)
+notes: 내비게이션(PND, Mobile)을 통해 수집되는 차량용 GPS Raw Data
+--
+lang: en
+title: Liste des jardins partagés à Paris
+notes:       Jeu de données listant l'ensemble des jardins partagés de Paris. 
+--
+lang: kr
+title: 진주시 CCTV 신호대기시간 데이터
+notes: 진주시 관내 산업단지 및 주요도로에 설치된 CCTV의 영상을 분석하여 차로별로 신호대기시간을 측정한 데이터로 카메라가 설치된 관측지점(위도,경도,지점명칭), 관측한 시간과 함께 기록함
+--
+lang: en
+title: Población por unidad poblacional
+notes: Relación detallada de las entidades y núcleos de población existentes a 1 de enero en cada municipio, incluyendo sus códigos y sus poblaciones.
+--
+lang: kr
+title: 서울시 자치구별 수소차 등록현황
+notes: 서울시 자치구별 수소차 등록현황입니다.
+--
+lang: es
+title: Tablas estadísticas del Censo de Mercado de Trabajo 2021 (CMT). Comarcas y subcomarcas de CAE. Fase de oferta
+notes: Estadistica Oficial. Tablas estadísticas de la operación estadística del Censo de Mercado de Trabajo de Euskadi que realiza el Órgano Estadístico del Departamento de Empleo y Políticas Sociales. En su fase Oferta, el objetivo general del CMT es conocer la oferta de fuerza de trabajo existente entre la población residente en la Comunidad Autónoma de Euskadi (CAE).
+--
+lang: kr
+title: 서울시 국민연금 가입사업장 현황 통계
+notes: ○ 통계개요
+ * 통계명 : 국민연금 가입사업장 현황
+ * 통계종류 : 국민연금의 가입사업장 현황을 제공하는 일반ㆍ보고통계
+ * 근거법령 :「국민연금법」「공무원연금법」「사립학교교직원연금법」규정에 따른 
+                  국민연금 가입사업장 현황
+ * 작성목적 : 국민연금제도의 업무추진 실적 및 가입자ㆍ징수ㆍ급여ㆍ기금현황 등을 
+                  파악하여 연금정책 수립 및 관련 연구를 위한 기초자료로 
+                  활용하는 것을 목적으로 함
+ * 조사체계 : 지사 및 기금운용본부 → 국민연금공단
+ * 공표주기 : 정기(매년, 12월 기준)
+ * 공표범위 : 지역 - 서울시 및 자치구, 해당기관
+                  내용 - 국민연금 가입사업장의 자치구별 현황
+○ 용어설명
+○ 기 타
+○ 출 처 : 국민연금공단
+--
+lang: en
+title: Modelo de flujo de tráfico en tiempo real
+notes: Este conjunto de datos contiene estimaciones del flujo de tráfico en tiempo real generadas por el modelo de flujo de tráfico de la ciudad de Santiago de Compostela. El conjunto de datos contiene un registro por cada segmento principal de la red de calles y carreteras de la ciudad, con su identificador y geometría (línea) y con la última estimación de la intensidad del flujo de tráfico (número de vehículos por hora) generada por el modelo.
+--
+lang: en
+title: comune-di-lapedona-punti-interesse
+notes: nan
+--
+lang: de
+title: Straßenverkehrsunfälle in Schleswig-Holstein Juni 2015
+notes: Straßenverkehrsunfälle in Schleswig-Holstein Juni 2015 - - Vorläufige Ergebnisse -
+--
+lang: kr
+title: 경주시 교통카드 사용내역 데이터
+notes: 경주시 버스정보시스템(BIS)에서 버스 사용자의 교통카드 사용내역 데이터입니다. 승차 및 하차 시각과 정류장 위치 정보, 교통카드 사용고객 연령대 정보가 포함되어 있습니다. 데이터 축적 이후에 일괄 저장하는 형태로 실시간 데이터는 아닙니
+--
+lang: cn
+title: 新北市公車路線軌跡
+notes: 新北市公車路線軌跡資料，說明文件詳如https://www.pto.gov.taipei/News_Content.aspx?n=A1DF07A86105B6BB&sms=2479B630A6BD8079&s=C668AE404DCD2EFE
+--
+lang: kr
+title: 해양수산부_해양환경 교육 콘텐츠
+notes: 해양환경 관련 교육 콘텐츠(해양쓰레기, 반려해변, 교육용책자 등)를 제공하는 서비스로 동영상자료, 교육자료, 홍보자료를 제공합니다.
+--
+lang: en
+title: Steuereinnahmen: Deutschland, Quartale, Steuerarten nach derSteuerverteilung
+notes: Steuereinnahmen: Deutschland, Quartale, Steuerarten nach derSteuerverteilung
+--
+lang: en
+title: Carriageway Details
+notes: This information contains length, width and surface type of roads in Northern Ireland.  Easting and Northing co-ordinates are provided at each change in road dimensions.  For further information on each road section referenced in the document, please refer to the Highway Network document published separately on the OpenDataNI website).
+--
+lang: kr
+title: 대전시 도로 지점(노드) 데이터
+notes: 대전시의 도로 노드에 대한 노드 ID,노드 명칭,노드 영문 명칭,모델 약칭,X좌표,Y좌표,노드 종류,노드 유형,노드 일련번호,행정구역 ID,사용 유무 등의 정보를 가지는 마스터 데이터 입니다.
+--
+lang: kr
+title: 강원도 강릉시_전기차 충전소
+notes: 2022년 기업매칭 지원 사업으로 구축된 강릉시의 전기차 충전소 설치 현황으로 충전소명, 사용시간, 이용자제한여부, 충전기상태, 충전기타입, 소재지위치정보,전자도면(shp) 등의 데이터를 포함합니다.
+--
+lang: en
+title: Fire and Rescue Service Operational Statistics
+notes: Statistics relating to the operational issues affecting fire and rescue services in England. It includes information on personnel, equality and diversity, health and safety, and operational activities.
+Source agency: Communities and Local Government
+Designation: Official Statistics not designated as National Statistics
+Language: English
+Alternative title: Ops Stats Bulletin
+--
+lang: kr
+title: 서울시 동작구 식육포장처리업 인허가 정보
+notes: 동작구의 소고기, 돼지고기 등 판매를 목적으로 식육을 절단하여 포장하는 업소정보
+* 좌표안내 :  중부원점TM(EPSG:2097) 좌표계에 따른 해당위치의 좌표정보이며 위경도 좌표는 제공하고 있지 않음
+* 본 데이터는 3일전 자료를 제공합니다.
+--
+lang: kr
+title: 안구 움직임 영상 데이터
+notes: 자연스러운 눈의 움직임과 시선 관련 기술 성숙도를 올리기 위해 거리에 따른 안구 움직임 영상과 VR헤드셋 내부에서의 안구 움직임 영상 데이터
+--
+lang: kr
+title: 대전시 노변장치(RSE) 구간통행속도 이력 데이터
+notes: 대전시 첨단 교통량 관리 시스템(ATMS)에서 산출/제공되는 RSE 구간 간의 통행속도 이력 데이터 (기준 RSE / 이전 RSE)
+--
+lang: kr
+title: 부산광역시_시립미술관 이용객 수
+notes: 2011년부터 2022년 10월까지 부산광역시립미술관을 이용한 이용객 수 현황- 데이터 항목: 년도, 월, 이용객 수 현황
+--
+lang: jp
+title: 【京都府】幼保連携型認定こども園の年齢別園児数
+notes: 京都府統計書 第19章 教育【リソース】幼保連携型認定こども園の年齢別園児数（時系列） / 2015年度～2020年度 / 幼保連携型認定こども園の年齢別園児数 / 令和3年(2021年)京都府統計書 19-9表 / 令和2年(2020年)京都府統計書 19-9表 / 令和元年(2019年)京都府統計書 19-9表 / 平成30年(2018年)京都府統計書 19-9表 / 平成29年(2017年)京都府統計書 19-9表 / 平成28年(2016年)京都府統計書 19-9表 / 平成27年【キーワード】京都府政策企画部 / 企画統計課 / 教育 / 統計書 / ３つ星オープンデータ / ４つ星オープンデータ
+--
+lang: kr
+title: 한국도로공사_주행거리별 총이용차량(폐)
+notes: 한국도로공사 영업소 중 운영형태가 폐쇄식 영업소를 선별하여 해당하는 영업소의 주행거리별 총이용차량을 csv형태의 파일 형식으로 제공
+--
+lang: en
+title: Straßenverkehrsunfälle in Hamburg Dezember 2020 - – Vorläufige Ergebnisse –
+notes: nan
+--
+lang: kr
+title: 대전시 노변장치(RSE) 구간통행속도 이력 데이터
+notes: 대전시 첨단 교통량 관리 시스템(ATMS)에서 산출/제공되는 RSE 구간 간의 통행속도 이력 데이터 (기준 RSE / 이전 RSE)
+--
+lang: en
+title: Echolotdaten - Nordsee 2021 9262103
+notes: Die vorliegenden Echolotdaten wurden im Rahmen der Seevermessung des Bundesamtes für Seeschifffahrt und Hydrographie erfasst, aber keiner weiteren Qualitätssicherung oder Validierung unterzogen. Es handelt sich um Rohdaten!
+--
+lang: kr
+title: 한국어 멀티세션 대화
+notes: 시간 간격이 있는 여러 개의 세션에서 두 명의 참여자가 부여받은 페르소나와 대화 토픽을 바탕으로 자유로운 일상 대화 텍스트를 수집한 뒤 참여자 정보, 대화 주제, 대화방 정보, 시간 간격, 페르소나 정보, 대화 및 요약에 대한 라벨링을 통해 데이터셋을 구성
+데이터의 5%는 주제와 관련된 질문-대답이 추가된 전문대화로 구성됨(2세션으로만 구축)
+--
+lang: en
+title: Traffic Flow Data July to Dec 2020 SDCC
+notes: SDCC Traffic Congestion Saturation Flow Data July to Dec 2020. Traffic, traffic saturation, and congestion data for sites across South Dublin County. Used by traffic management to control stage timings on junctions. It is recommended that this Dataset is read in conjunction with the ‘Traffic Data Site Names SDCC’ Dataset.A detailed description of each column heading can be referenced below;scn: Site Serial numberregion: A group of Nodes that are operated under scoot control at the same common cycle time. Normally these will be nodes between which co-ordination is desirable. Some of the nodes may be double cycling at half of the region cycle time.system: scoot STC UTC (UTC-MX)locn: locationssite: Site numbersday of the week Monday to Sunday. Abbreviations; Mo,TU,WE,TH,FR,SA,SU.start_time — Please ignore the date displayed in this column. The actual data collection date is correctly displayed in the ‘date’ column. The date displayed here is the date of when report was run and extracted from the system, but correctly reflect start time of 15 minute intervals. end_time time of 15 minute intervals.flow: A representation of demand (flow) for each link built over several minutes by the scoot model. Scoot has two profiles:(1) Short — Raw data representing the actual values over the previous few minutes(2) Long — A smoothed average of values over a longer periodscoot will choose to use the appropriate profile depending on a number of factors.flow_pc: Same as above ref ref PC scootcong: Congestion is directly measured from the detector. If the detector is placed beyond the normal end of queue in the street it is rarely covered by Stationary traffic, except of course when congestion occurs. If any detector shows standing traffic for the whole of an interval of this is recorded. The number of intervals of congestion in any cycle is also recorded.The percentage congestion is calculated from:No of congested intervals x 4 x 100 cycle time in seconds.This percentage of congestion is available to view and more importantly for the optimisers to take into account.cong_pc: Same as above ref PC scootDSAT: The ratio of the demand flow to the maximum possible discharge flow, i.e. it is the ratio of the demand to the discharge rate (Saturation Occupancy) multiplied by the duration of the effective green time. The Split optimiser will try to minimise the maximum degree of saturation on links Approaching the node.</d"

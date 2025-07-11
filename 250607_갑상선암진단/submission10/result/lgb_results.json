@@ -1,0 +1,27 @@
+{
+  "model_name": "LightGBM",
+  "cv_f1_mean": 0.4872,
+  "cv_f1_std": 0.0036,
+  "threshold": 0.628,
+  "best_params": {
+    "num_leaves": 104,
+    "learning_rate": 0.011292066104317128,
+    "feature_fraction": 0.5352845499683623,
+    "bagging_fraction": 0.7636208378407982,
+    "min_child_samples": 33,
+    "reg_alpha": 6.766203330264083,
+    "reg_lambda": 1.2110557703279023,
+    "n_estimators": 1293,
+    "max_depth": 6,
+    "objective": "binary",
+    "metric": "binary_logloss",
+    "boosting_type": "gbdt",
+    "bagging_freq": 1,
+    "random_state": 42,
+    "verbose": -1,
+    "is_unbalance": true
+  },
+  "goal_achieved": true,
+  "optuna_best_value": 0.4872,
+  "n_trials": 100
+}

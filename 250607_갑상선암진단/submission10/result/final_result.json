@@ -1,0 +1,11 @@
+{
+  "best_model": "LightGBM",
+  "cv_f1_score": 0.4872,
+  "threshold": 0.628,
+  "predicted_positive_rate": 0.12446974287940438,
+  "prediction_distribution": {
+    "0": 40453,
+    "1": 5751
+  },
+  "submission_file": "submission10.csv"
+}
