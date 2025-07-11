@@ -1,0 +1,25 @@
+## 데이터 전처리 (RDKit 기반)  
+- [ ] RDKit 설치 및 환경 확인  
+- [ ] SMILES 정합성 검사 후 Canonical SMILES 변환  
+- [ ] 염 · 용매 분리 및 표준화(Charge / Tautomer 정규화)  
+- [ ] 중복·이상치(ID, SMILES, Inhibition 값) 제거  
+- [ ] 기본 화학 특성 계산  
+  - 분자량, LogP, tPSA, rotatable bonds, HBD/HBA 등  
+- [ ] Fingerprint 생성  
+  - Morgan(fp = 2048, r = 2/3)  
+  - MACCS, RDKit 기본 FP  
+- [ ] Fragment / Functional group 카운트 (RDKit + SMARTS)  
+- [ ] 3D 엔베딩(Optional) 후 3D Descriptor(molar volume 등) 계산  
+- [ ] Mordred 또는 PaDEL 사용한 추가 descriptor 확보  
+- [ ] Feature selection  
+  - 상관계수/중복 제거  
+  - Variance threshold  
+  - 모델 기반 중요도(LGBM/RandomForest)  
+- [ ] 스케일링 및 정규화  
+  - StandardScaler(연속형)  
+  - Binary 특성 → 그대로  
+- [ ] 타깃(Inhibition) 변환 여부 확인  
+  - 0–100 범위 유지 vs. logit/Box-Cox  
+- [ ] 학습/검증 분리(stratified KFold, seed 고정)  
+- [ ] 전처리 파이프라인 joblib 저장  
+- [ ] 전처리된 X_train/X_test CSV 및 numpy 저장  

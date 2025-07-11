@@ -1,0 +1,13 @@
+{
+  "cv_score_mean": 0.5660242879486089,
+  "cv_score_std": 0.02560883857963998,
+  "cv_rmse_mean": 0.24949118965939995,
+  "cv_rmse_std": 0.005184168845389277,
+  "cv_correlation_mean": 0.38153976555661795,
+  "cv_correlation_std": 0.05008493932359482,
+  "final_features_count": 3099,
+  "train_samples": 1681,
+  "test_samples": 100,
+  "best_model_score": 0.6042048488902315,
+  "best_model": "WeightedEnsemble_ALL_L3"
+}

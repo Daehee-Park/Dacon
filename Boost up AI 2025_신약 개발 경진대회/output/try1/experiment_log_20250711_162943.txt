@@ -1,0 +1,80 @@
+2025-07-11 16:29:43,884 - INFO - Starting CYP3A4 inhibition prediction experiment
+2025-07-11 16:29:43,884 - INFO - RDKit available: True
+2025-07-11 16:29:43,884 - INFO - AutoGluon available: True
+2025-07-11 16:29:43,885 - INFO - Loading data...
+2025-07-11 16:29:43,892 - INFO - Train shape: (1681, 3)
+2025-07-11 16:29:43,892 - INFO - Test shape: (100, 2)
+2025-07-11 16:29:43,892 - INFO - Processing train data...
+2025-07-11 16:29:43,892 - INFO - Initial shape: (1681, 3)
+2025-07-11 16:29:43,893 - INFO - Step 1: SMILES validation and canonicalization
+2025-07-11 16:29:44,514 - INFO - Invalid SMILES found: 0
+2025-07-11 16:29:44,515 - INFO - Step 2: Salt removal and standardization
+2025-07-11 16:29:47,119 - INFO - After standardization: (1681, 5)
+2025-07-11 16:29:47,119 - INFO - Step 3: Removing duplicates
+2025-07-11 16:29:47,120 - INFO - Duplicates removed: 0
+2025-07-11 16:29:47,120 - INFO - After duplicate removal: (1681, 5)
+2025-07-11 16:29:47,120 - INFO - Step 4: Calculating molecular properties
+2025-07-11 16:29:48,749 - INFO - Molecular properties calculated: 0 features
+2025-07-11 16:29:48,750 - INFO - Step 5: Generating fingerprints
+2025-07-11 16:30:01,012 - INFO - Fingerprints generated: 4263 features
+2025-07-11 16:30:01,012 - INFO - Step 6: Combining features
+2025-07-11 16:30:01,041 - INFO - Combined features shape: (1681, 4268)
+2025-07-11 16:30:01,142 - INFO - Processing test data...
+2025-07-11 16:30:01,142 - INFO - Initial shape: (100, 2)
+2025-07-11 16:30:01,142 - INFO - Step 1: SMILES validation and canonicalization
+2025-07-11 16:30:01,181 - INFO - Invalid SMILES found: 0
+2025-07-11 16:30:01,181 - INFO - Step 2: Salt removal and standardization
+2025-07-11 16:30:01,342 - INFO - After standardization: (100, 4)
+2025-07-11 16:30:01,343 - INFO - Step 4: Calculating molecular properties
+2025-07-11 16:30:01,442 - INFO - Molecular properties calculated: 0 features
+2025-07-11 16:30:01,442 - INFO - Step 5: Generating fingerprints
+2025-07-11 16:30:02,192 - INFO - Fingerprints generated: 4263 features
+2025-07-11 16:30:02,193 - INFO - Step 6: Combining features
+2025-07-11 16:30:02,195 - INFO - Combined features shape: (100, 4267)
+2025-07-11 16:30:02,238 - INFO - Features for modeling: 4263
+2025-07-11 16:30:02,238 - INFO - Training samples: 1681
+2025-07-11 16:30:02,239 - INFO - Test samples: 100
+2025-07-11 16:30:02,239 - INFO - Starting feature selection...
+2025-07-11 16:30:02,239 - INFO - Initial features: 4263
+2025-07-11 16:30:02,381 - INFO - After variance threshold (0.01): 3118 features
+2025-07-11 16:31:46,819 - INFO - After correlation removal: 3099 features
+2025-07-11 16:31:46,837 - INFO - Scaling features...
+2025-07-11 16:31:46,972 - INFO - Training AutoGluon model with competition metric...
+2025-07-11 20:51:59,789 - INFO - Performing cross-validation...
+2025-07-11 20:51:59,790 - INFO - Fold 1/5
+2025-07-11 20:53:30,433 - INFO - Fold 1 - Score: 0.5718, RMSE: 0.2458, Corr: 0.3894
+2025-07-11 20:53:30,434 - INFO - Fold 2/5
+2025-07-11 20:54:46,175 - INFO - Fold 2 - Score: 0.5682, RMSE: 0.2412, Corr: 0.3777
+2025-07-11 20:54:46,176 - INFO - Fold 3/5
+2025-07-11 20:56:24,876 - INFO - Fold 3 - Score: 0.5776, RMSE: 0.2525, Corr: 0.4078
+2025-07-11 20:56:24,877 - INFO - Fold 4/5
+2025-07-11 20:57:53,085 - INFO - Fold 4 - Score: 0.5181, RMSE: 0.2551, Corr: 0.2912
+2025-07-11 20:57:53,086 - INFO - Fold 5/5
+2025-07-11 20:59:18,461 - INFO - Fold 5 - Score: 0.5944, RMSE: 0.2529, Corr: 0.4417
+2025-07-11 20:59:18,461 - INFO - CV Score: 0.5660 ± 0.0256
+2025-07-11 20:59:18,462 - INFO - CV RMSE: 0.2495 ± 0.0052
+2025-07-11 20:59:18,462 - INFO - CV Correlation: 0.3815 ± 0.0501
+2025-07-11 20:59:18,462 - INFO - Making predictions on test set...
+2025-07-11 20:59:21,449 - INFO - Test predictions range: 16.3964 to 59.4066
+2025-07-11 20:59:21,451 - INFO - After clipping: 16.3964 to 59.4066
+2025-07-11 20:59:21,459 - INFO - Submission file saved: output/try1\submission.csv
+2025-07-11 20:59:21,459 - INFO - Model leaderboard:
+2025-07-11 20:59:21,491 - INFO - 
+                          model  score_val        eval_metric  pred_time_val    fit_time  pred_time_val_marginal  fit_time_marginal  stack_level  can_infer  fit_order
+0       WeightedEnsemble_ALL_L3   0.604205  competition_score      19.984406  454.974144                0.000996           0.241940            3       True        214
+1           WeightedEnsemble_L3   0.601594  competition_score      20.292059  473.747717                0.000996           0.242963            3       True        215
+2           WeightedEnsemble_L2   0.599622  competition_score       1.001987  172.078960                0.000996           0.243932            2       True        107
+3       RandomForest_r34_BAG_L2   0.588952  competition_score      18.395762  312.994728                3.246876           3.712129            2       True        163
+4           CatBoost_r49_BAG_L2   0.588307  competition_score      15.653678  323.607189                0.504792          14.324591            2       True        158
+..                          ...        ...                ...            ...         ...                     ...                ...          ...        ...        ...
+210   NeuralNetTorch_r71_BAG_L2   0.309009  competition_score      15.296233  321.738765                0.147347          12.456166            2       True        176
+211  NeuralNetTorch_r197_BAG_L2   0.308965  competition_score      15.292256  352.015109                0.143370          42.732510            2       True        157
+212   NeuralNetTorch_r19_BAG_L2   0.307349  competition_score      15.293705  328.982232                0.144820          19.699633            2       True        208
+213   NeuralNetTorch_r76_BAG_L1   0.300348  competition_score       0.106020   50.383959                0.106020          50.383959            1       True         86
+214   NeuralNetTorch_r71_BAG_L1   0.296503  competition_score       0.114496   12.374180                0.114496          12.374180            1       True         69
+
+[215 rows x 10 columns]
+2025-07-11 20:59:21,498 - INFO - Saving processed data...
+2025-07-11 20:59:29,859 - INFO - Experiment completed successfully!
+2025-07-11 20:59:29,860 - INFO - Results saved in: output/try1
+2025-07-11 20:59:29,860 - INFO - Best model: WeightedEnsemble_ALL_L3 (Score: 0.6042)

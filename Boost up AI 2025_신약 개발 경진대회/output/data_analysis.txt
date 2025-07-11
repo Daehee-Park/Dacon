@@ -1,0 +1,64 @@
+Train shape: (1681, 3)
+
+Test shape: (100, 2)
+
+Train columns: ['ID', 'Canonical_Smiles', 'Inhibition']
+
+Test columns: ['ID', 'Canonical_Smiles']
+
+Train missing values:
+ID                  0
+Canonical_Smiles    0
+Inhibition          0
+dtype: int64
+
+Test missing values:
+ID                  0
+Canonical_Smiles    0
+dtype: int64
+
+Train describe:
+                ID                       Canonical_Smiles   Inhibition
+count         1681                                   1681  1681.000000
+unique        1681                                   1681          NaN
+top     TRAIN_1680  CCc1ccc(\C=N\Nc2nn3cnnc3c4ccccc24)cc1          NaN
+freq             1                                      1          NaN
+mean           NaN                                    NaN    33.221831
+std            NaN                                    NaN    26.405830
+min            NaN                                    NaN     0.000000
+25%            NaN                                    NaN    10.900000
+50%            NaN                                    NaN    29.000000
+75%            NaN                                    NaN    50.200000
+max            NaN                                    NaN    99.381547
+
+Test describe:
+              ID                                   Canonical_Smiles
+count        100                                                100
+unique       100                                                100
+top     TEST_000  O=C(NC1CCCC1)C2(CCCCC2)N(CC3CCCO3)C(=O)C4=CNC(...
+freq           1                                                  1
+
+Train nunique:
+ID                  1681
+Canonical_Smiles    1681
+Inhibition          1120
+dtype: int64
+
+Test nunique:
+ID                  100
+Canonical_Smiles    100
+dtype: int64
+
+Target column: Inhibition
+
+Target describe:
+count    1681.000000
+mean       33.221831
+std        26.405830
+min         0.000000
+25%        10.900000
+50%        29.000000
+75%        50.200000
+max        99.381547
+Name: Inhibition, dtype: float64
+

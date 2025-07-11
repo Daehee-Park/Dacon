@@ -1,4 +1,6 @@
 catboost_info/
+autogluon_models/
+fold_*_models/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
