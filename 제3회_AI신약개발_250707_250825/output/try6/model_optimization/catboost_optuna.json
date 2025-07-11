@@ -1,0 +1,32 @@
+[
+  {
+    "iterations": 110,
+    "learning_rate": 0.08057972889972906,
+    "depth": 7,
+    "l2_leaf_reg": 9.40707467551289
+  },
+  {
+    "iterations": 136,
+    "learning_rate": 0.039555124953521585,
+    "depth": 6,
+    "l2_leaf_reg": 2.429321432514254
+  },
+  {
+    "iterations": 51,
+    "learning_rate": 0.16032779755972051,
+    "depth": 3,
+    "l2_leaf_reg": 9.703176963714322
+  },
+  {
+    "iterations": 145,
+    "learning_rate": 0.05685880576027953,
+    "depth": 3,
+    "l2_leaf_reg": 3.1836435463995256
+  },
+  {
+    "iterations": 97,
+    "learning_rate": 0.21173680619651514,
+    "depth": 3,
+    "l2_leaf_reg": 9.342366407737133
+  }
+]

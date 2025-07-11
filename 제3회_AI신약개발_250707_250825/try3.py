@@ -877,7 +877,7 @@ try:
     
     # Submission 파일
     submission = test_df[['ID']].copy()
-    submission['IC50_nM'] = test_ic50_pred
+    submission['ASK1_IC50_nM'] = test_ic50_pred
     submission.to_csv('output/try3/submission.csv', index=False)
     
     # 설정 저장

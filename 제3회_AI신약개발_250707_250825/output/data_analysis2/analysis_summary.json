@@ -1,0 +1,11 @@
+{
+  "analysis_time": "2025-07-11T10:58:46.226414",
+  "data_sizes": {
+    "chembl": 812,
+    "pubchem": 1148,
+    "train_total": 1224,
+    "test": 127
+  },
+  "train_molecular_properties": null,
+  "test_molecular_properties": null
+}

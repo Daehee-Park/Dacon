@@ -1,0 +1,27 @@
+{
+  "original_data": {
+    "ChEMBL": 812,
+    "PubChem": 1148
+  },
+  "cleaned_data": {
+    "ChEMBL": 367,
+    "PubChem": 664
+  },
+  "final_data": 1031,
+  "reliability_stats": {
+    "ChEMBL": {
+      "High": 339,
+      "Mid": 28,
+      "Low": 95
+    },
+    "PubChem": {
+      "High": 433,
+      "Mid": 231,
+      "Low": 98
+    },
+    "final": {
+      "High": 772,
+      "Mid": 259
+    }
+  }
+}

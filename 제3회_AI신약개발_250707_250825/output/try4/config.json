@@ -1,0 +1,13 @@
+{
+  "NBITS": 1024,
+  "SEED": 42,
+  "N_FOLDS": 2,
+  "OPTUNA_TRIALS": 100,
+  "MORGAN_RADIUS": 2,
+  "REMOVE_OUTLIERS": true,
+  "USE_MOLECULAR_FEATURES": false,
+  "SCALE_FEATURES": false,
+  "FEATURE_SELECTION": false,
+  "GROUP_CV": true,
+  "EARLY_STOPPING_PATIENCE": 20
+}
