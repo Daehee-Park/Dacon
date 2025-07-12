@@ -12,7 +12,7 @@ memo='submission 메모 내용' )
 """
 
 ####### 수정 필요 #######
-file_path = 'output/try1/submission.csv'
+submission_path = 'output/try1/submission.csv'
 token = os.getenv('TOKEN')
 cpt_id = os.getenv('COMPETITION_ID')
 team_name = '하품'
@@ -20,7 +20,7 @@ memo = 'Try1-5CV: 0.604205'
 #####################
 
 result = dacon_submit_api.post_submission_file(
-    file_path=file_path,
+    file_path=submission_path,
     token=token,
     cpt_id=cpt_id,
     team_name=team_name,

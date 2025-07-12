@@ -61,10 +61,28 @@ CV 0.5757±0.020, Public 0.3125, gap -46%.
 ---
 
 ### Try #7: 데이터 품질 개선 + 소스별 분리 학습
-중복/노이즈 제거(1,960→1,031), 신뢰도 등급화, CV>0.5/극단값 제거 등 데이터 품질 대폭 개선.  
-ChEMBL/PubChem 분리해 CatBoost/ExtraTrees로 각각 학습, Source classifier로 Test 분포 추정, 소스별 예측 가중 앙상블.  
-PubChem CatBoost CV 0.8604±0.024, ChEMBL CatBoost 0.7786±0.043, LOSO 0.6651±0.147, Public 미제출.  
-노이즈 제거와 소스별 분리 학습으로 CV가 폭발적으로 향상, PubChem 모델이 특히 우수. Test 분포 추정의 불확실성은 여전.
+중복/노이즈 제거(CV>0.5, IQR 기반)로 데이터 품질을 대폭 개선 (1,960→1,031개).  
+정제된 ChEMBL/PubChem 데이터를 분리해 각각 CatBoost/ExtraTrees 모델을 개별 학습.  
+Source classifier로 Test 데이터의 소스 분포를 추정하고, 소스별 예측값을 가중 앙상블.  
+PubChem CV 0.8604, ChEMBL CV 0.7786, **LOSO CV 0.6651**, Public 0.3425. gap(vs LOSO) -48%.  
+데이터 정제와 소스별 접근으로 CV 성능이 폭발적으로 향상됐지만, test set의 분포가 예상과 달라 여전히 큰 성능 하락 발생.
+
+---
+
+### Try #8: AutoGluon 자동화 모델링 (계획)
+**가설:** AutoGluon의 강력한 자동화된 feature engineering과 model stacking이 수동 최적화보다 더 강건하고 일반화 성능이 높은 모델을 구축하여, CV-Public score 갭을 줄일 수 있다.
+
+**실험 계획:**
+1. **데이터 준비:** Baseline과 동일한 단순 전처리 파이프라인 사용 (ChEMBL + PubChem 통합, 중복 제거).
+2. **피처:** MorganFP(2048) + AutoMLPipelineFeatureGenerator로 자동 feature engineering.
+3. **모델링:**
+   - 통합 데이터셋으로 단일 AutoGluon `TabularPredictor` 학습
+   - `preset='best_quality'`, `time_limit=3600`으로 충분한 탐색 시간 확보
+   - `full_weighted_ensemble_additionally=True`, `dynamic_stacking=True`로 고도화된 앙상블 구성
+   - `auto_stack=True`, `num_bag_folds=5`, `num_stack_levels=1`로 안정적인 스택 구조
+4. **평가:** Custom competition score 메트릭 사용하여 리더보드 점수와 직접 연관된 성능 측정.
+
+**기대 효과:** 복잡한 소스별 분리 학습 대신 AutoGluon의 강력한 자동화로 단순하면서도 효과적인 모델 구축.
 
 ---
 
