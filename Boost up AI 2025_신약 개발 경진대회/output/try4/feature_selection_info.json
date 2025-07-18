@@ -1,0 +1,7 @@
+{
+  "original_features": 2074,
+  "after_variance_selection": 967,
+  "after_mi_selection": 97,
+  "pca_components": 59,
+  "final_features": 78
+}
