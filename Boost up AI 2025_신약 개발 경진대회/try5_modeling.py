@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 from autogluon.tabular import TabularPredictor
-from custom_metrics import ag_smape_scorer
+from custom_metrics import competition_scorer
 import random
 import os
 import warnings
@@ -21,9 +21,9 @@ def seed_everything(seed):
 seed_everything(96)
 # ------------------------- 3. Model -----------------------------------------
 predictor = TabularPredictor(
-    label='power_consumption', 
+    label='Inhibition', 
     problem_type='regression', 
-    eval_metric=ag_smape_scorer, 
+    eval_metric=competition_scorer, 
     path='./output/try5/autogluon_models'
 )
 
@@ -49,5 +49,5 @@ best_cv_score = leaderboard.iloc[0]['score_val']
 
 dacon_submit(
     submission_path='./output/try5/submission.csv',
-    memo=f'Regression: Imputed sunshine/solar for test, Feature engineering, log transform, building-hour avg features, AutoGluon 4Hrs 5CV: {best_cv_score}'
+    memo=f'Try5-Bit Based Preprocessing with Autogluon, AutoGluon 4Hrs 5CV: {best_cv_score}'
 )
