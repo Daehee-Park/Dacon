@@ -112,5 +112,5 @@ print(f'Final feature matrix: {X_train.shape[1]} columns; '
       f'{X_train.shape[0]} training rows / {X_test.shape[0]} test rows.')
 
 # ------------------------- 7. (optional) save to disk -----------------------
-X_train.to_csv('./output/try2/preprocessed_train.csv', index=False)
-X_test .to_csv('./output/try2/preprocessed_test.csv' , index=False)
+X_train.to_csv('./output/try5/preprocessed_train.csv', index=False)
+X_test .to_csv('./output/try5/preprocessed_test.csv' , index=False)
