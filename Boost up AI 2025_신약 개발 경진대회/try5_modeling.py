@@ -27,8 +27,8 @@ predictor = TabularPredictor(
     path='./output/try5/autogluon_models'
 )
 
-predictor.fit(train_data=preprocessed_train_df, presets='best_quality',time_limit=3600*4,full_weighted_ensemble_additionally=True,dynamic_stacking=True,
-            auto_stack=True,num_bag_folds=8,num_stack_levels=1,num_gpus=1,refit_full=True)
+predictor.fit(train_data=preprocessed_train_df, presets='experimental_quality',time_limit=3600*4,full_weighted_ensemble_additionally=True,
+            num_bag_folds=8,num_stack_levels=1,refit_full=True)
 
 # ------------------------- 4. Predict ---------------------------------------
 predictions = predictor.predict(preprocessed_test_df)
