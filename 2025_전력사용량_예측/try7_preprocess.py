@@ -116,8 +116,27 @@ for df in [train_df, test_df]:
     df['day_of_week_sin'] = np.sin(2 * np.pi * df['day_of_week'] / 7)
     df['day_of_week_cos'] = np.cos(2 * np.pi * df['day_of_week'] / 7)
 
-    # 휴일 피처 (간단한 예시: 8월 15일)
-    df['is_holiday'] = ((df['month'] == 8) & (df['day'] == 15)).astype(int)
+    # 한국 휴일 피처 (2024년 기준)
+    df['is_memorial_day'] = ((df['month'] == 6) & (df['day'] == 6)).astype(int)  # 현충일
+    df['is_liberation_day'] = ((df['month'] == 8) & (df['day'] == 15)).astype(int)  # 광복절
+    
+    # 대체공휴일 (2024년 기준)
+    df['is_substitute_holiday'] = ((df['month'] == 6) & (df['day'] == 10)).astype(int)  # 현충일 대체공휴일(월요일)
+    
+    # 여름휴가철 피처 (7월 말~8월 초)
+    df['is_summer_vacation'] = (
+        ((df['month'] == 7) & (df['day'] >= 25)) | 
+        ((df['month'] == 8) & (df['day'] <= 15))
+    ).astype(int)
+    
+    # 모든 휴일 통합
+    df['is_holiday'] = (
+        df['is_memorial_day'] | 
+        df['is_liberation_day'] | 
+        df['is_substitute_holiday']
+    ).astype(int)
+    
+    # 주말 + 휴일
     df['is_weekend_holiday'] = ((df['day_of_week'] >= 5) | (df['is_holiday'] == 1)).astype(int)
 
     # 불쾌지수 (DI)
@@ -163,7 +182,7 @@ num_features = [
     'sunshine', 'solar_radiation', 'total_area', 'cooling_area', 
     'solar_capacity', 'ess_capacity', 'pcs_capacity',
     'hour_sin', 'hour_cos', 'day_of_week_sin', 'day_of_week_cos',
-    'is_weekend_holiday', 'di', 'temp_lag_1', 'building_hour_median'
+    'is_weekend_holiday', 'is_summer_vacation', 'di', 'temp_lag_1', 'building_hour_median'
 ]
 cat_features = ['building_type']
 
