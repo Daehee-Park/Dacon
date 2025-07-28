@@ -1,0 +1,20 @@
+{
+  "feature_count": 12,
+  "feature_names": [
+    "MolWt",
+    "MolLogP",
+    "TPSA",
+    "NumHBD",
+    "NumHBA",
+    "NumRotatableBonds",
+    "NumRings",
+    "NumAromaticRings",
+    "HeavyAtomCount",
+    "FractionCSP3",
+    "BertzCT",
+    "QED"
+  ],
+  "scaling_method": "StandardScaler",
+  "fingerprints_used": false,
+  "description": "신약개발에 중요한 핵심 분자 특성만 사용"
+}
