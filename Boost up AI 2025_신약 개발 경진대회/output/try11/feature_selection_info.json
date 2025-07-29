@@ -1,0 +1,31 @@
+{
+  "feature_count": 17,
+  "feature_names": [
+    "MolWt",
+    "MolLogP",
+    "TPSA",
+    "NumHBD",
+    "NumHBA",
+    "NumRotatableBonds",
+    "NumRings",
+    "NumAromaticRings",
+    "HeavyAtomCount",
+    "FractionCSP3",
+    "BertzCT",
+    "QED",
+    "similarity_ketoconazole",
+    "similarity_bergapten",
+    "similarity_quercetin",
+    "similarity_piperine",
+    "max_inhibitor_similarity"
+  ],
+  "scaling_method": "StandardScaler",
+  "known_inhibitors_used": [
+    "ketoconazole",
+    "bergapten",
+    "quercetin",
+    "piperine"
+  ],
+  "similarity_features": 5,
+  "description": "핵심 분자특성 + 알려진 CYP3A4 저해제와의 구조적 유사도"
+}
