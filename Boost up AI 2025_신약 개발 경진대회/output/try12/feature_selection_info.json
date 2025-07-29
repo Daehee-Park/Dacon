@@ -1,0 +1,39 @@
+{
+  "total_features": 27,
+  "feature_categories": {
+    "descriptors": 16,
+    "similarity_features": 5,
+    "structural_alerts": 4,
+    "ratio_features": 2
+  },
+  "feature_names": [
+    "MolWt",
+    "TPSA",
+    "NumHBD",
+    "NumHBA",
+    "NumRotBonds",
+    "NumRings",
+    "NumAroRings",
+    "HeavyAtomCount",
+    "FracCSP3",
+    "BertzCT",
+    "QED",
+    "MolLogP",
+    "MolMR",
+    "LabuteASA",
+    "NumAliphaticRings",
+    "NumAroHeterocycles",
+    "sim_ketoconazole",
+    "sim_bergapten",
+    "sim_quercetin",
+    "sim_piperine",
+    "max_inhibitor_similarity",
+    "alert_furanocoumarin",
+    "alert_imidazole",
+    "alert_catechol",
+    "alert_basic_nitrogen",
+    "TPSA_ratio",
+    "LogP_per_Heavy"
+  ],
+  "description": "의화학 도메인 지식 기반 특성: 고급 물리화학적 특성, 알려진 저해제 유사도, 구조적 경고(Pharmacophore), 비율 특성 포함"
+}
