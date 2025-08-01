@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import os
 import random
-from rdkit import Chem
+from rdkit import Chem, RDLogger
 from rdkit.Chem import AllChem, DataStructs, Descriptors, Lipinski, rdFingerprintGenerator
 from rdkit.Chem.AtomPairs import Pairs, Torsions
 from sklearn.preprocessing import StandardScaler
@@ -20,6 +20,8 @@ import gc
 warnings.filterwarnings(action='ignore', message=".*DEPRECATION WARNING:.*")
 warnings.filterwarnings("ignore", message=".*does not have valid feature names.*")
 warnings.filterwarnings('ignore', category=UserWarning)
+lg = RDLogger.logger()
+lg.setLevel(RDLogger.CRITICAL) 
 
 CFG = {
     'NBITS': 2048,
