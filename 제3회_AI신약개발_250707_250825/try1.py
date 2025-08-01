@@ -17,7 +17,7 @@ import optuna
 import warnings
 import gc
 
-warnings.filterwarnings(action='ignore', message=".*DEPRECATION WARNING: please use*")
+warnings.filterwarnings(action='ignore', message=".*DEPRECATION WARNING:.*")
 warnings.filterwarnings("ignore", message=".*does not have valid feature names.*")
 warnings.filterwarnings('ignore', category=UserWarning)
 
