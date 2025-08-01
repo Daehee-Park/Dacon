@@ -18,7 +18,7 @@ warnings.filterwarnings(action='ignore', message=".*please use MorganGenerator.*
 warnings.filterwarnings("ignore", message=".*does not have valid feature names.*")
 
 CFG = {
-    'NBITS': 2048,
+    'NBITS': 256,
     'SEED': 33,
     'N_SPLITS': 5,
     'N_TRIALS': 200,
