@@ -320,7 +320,6 @@ if __name__ == "__main__":
             'random_seed': CFG['SEED'],
             'thread_count': CFG['CPUS'],
             'verbose': False,
-            'n_jobs': CFG['CPUS']
         }
         
         xgb_params = {
@@ -334,7 +333,6 @@ if __name__ == "__main__":
             'random_state': CFG['SEED'],
             'n_jobs': CFG['CPUS'],
             'verbosity': 0,
-            'n_jobs': CFG['CPUS']
         }
         
         # Train models
