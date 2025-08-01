@@ -19,7 +19,8 @@ CFG = {
     'NBITS': 2048,
     'SEED': 33,
     'N_SPLITS': 5,
-    'N_TRIALS': 50 
+    'N_TRIALS': 200,
+    'CPUS': 64
 }
 
 def seed_everything(seed):
@@ -28,6 +29,9 @@ def seed_everything(seed):
     np.random.seed(seed)
 
 seed_everything(CFG['SEED'])
+
+OUTPUT_DIR = "./output/baseline"
+os.makedirs(OUTPUT_DIR, exist_ok=True)  # 경로 없으면 생성
 
 def load_and_preprocess_data():
     try:
@@ -81,7 +85,7 @@ def get_score(y_true_ic50, y_pred_ic50, y_true_pic50, y_pred_pic50):
 
 def objective(trial, X, y):
     params = {
-        'objective': 'regression', 'metric': 'rmse', 'verbose': -1, 'n_jobs': -1,
+        'objective': 'regression', 'metric': 'rmse', 'verbose': -1, 'n_jobs': CFG['CPUS'],
         'seed': CFG['SEED'], 'boosting_type': 'gbdt', 'n_estimators': 2000,
         'learning_rate': trial.suggest_float('learning_rate', 0.01, 0.1, log=True),
         'num_leaves': trial.suggest_int('num_leaves', 20, 100),
@@ -131,12 +135,12 @@ if __name__ == "__main__":
 
         print("\n--- Starting Hyperparameter Optimization with Optuna ---")
         study = optuna.create_study(direction='maximize', study_name='lgbm_tuning')
-        study.optimize(lambda trial: objective(trial, X, y), n_trials=CFG['N_TRIALS'])
+        study.optimize(lambda trial: objective(trial, X, y), n_trials=CFG['N_TRIALS'], n_jobs=CFG['CPUS'])
 
         print(f"\nOptimization Finished. Best Score: {study.best_value:.4f}")
         print("Best Parameters:", study.best_params)
 
-        best_params = { 'objective': 'regression', 'metric': 'rmse', 'verbose': -1, 'n_jobs': -1,
+        best_params = { 'objective': 'regression', 'metric': 'rmse', 'verbose': -1, 'n_jobs':CFG['CPUS'],
                         'seed': CFG['SEED'], 'boosting_type': 'gbdt', 'n_estimators': 2000 }
         best_params.update(study.best_params)
 
@@ -167,13 +171,13 @@ if __name__ == "__main__":
         pred_df = pd.DataFrame({'ID': test_df.loc[valid_test_mask, 'ID'], 'ASK1_IC50_nM': pIC50_to_IC50(test_preds)})
         submission_df = submission_df[['ID']].merge(pred_df, on='ID', how='left')
         submission_df['ASK1_IC50_nM'].fillna(train_df['ic50_nM'].mean(), inplace=True)
-        submission_df.to_csv("./output/baseline/submission.csv", index=False)
+        submission_df.to_csv(f"{OUTPUT_DIR}/submission.csv", index=False)
         print("Submission file")
 
         # ------------------------- Submit ------------------------------------------
         from dacon_submit import dacon_submit
 
         dacon_submit(
-            submission_path='./output/baseline/submission.csv',
+            submission_path=f"{OUTPUT_DIR}/submission.csv",
             memo=f"Baseline, CV {study.best_value:.8f}"
         ) 
