@@ -211,7 +211,6 @@ def train_model_cv(X, y, model_type='lgb', params=None):
             model.fit(
                 X_train, y_train,
                 eval_set=[(X_val, y_val)],
-                early_stopping_rounds=100,
                 verbose=False
             )
         
@@ -309,7 +308,8 @@ if __name__ == "__main__":
             'n_estimators': 3000,
             'n_jobs': CFG['CPUS'],
             'seed': CFG['SEED'],
-            'verbose': -1
+            'verbose': -1,
+            'n_jobs': CFG['CPUS']
         }
         
         cb_params = {
@@ -319,7 +319,8 @@ if __name__ == "__main__":
             'l2_leaf_reg': 3,
             'random_seed': CFG['SEED'],
             'thread_count': CFG['CPUS'],
-            'verbose': False
+            'verbose': False,
+            'n_jobs': CFG['CPUS']
         }
         
         xgb_params = {
@@ -332,7 +333,8 @@ if __name__ == "__main__":
             'reg_lambda': 1,
             'random_state': CFG['SEED'],
             'n_jobs': CFG['CPUS'],
-            'verbosity': 0
+            'verbosity': 0,
+            'n_jobs': CFG['CPUS']
         }
         
         # Train models
