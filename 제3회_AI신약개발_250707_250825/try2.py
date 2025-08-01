@@ -240,21 +240,31 @@ if __name__ == "__main__":
         gc.collect()
 
     # 4. 2단계 모델 (스태킹)
-    print("\n4. Training Level 2 Meta-Model (Stacking)...")
+    print("\n4. Training Level 2 Meta-Model (Stacking) with CV...")
     X_meta_train = np.column_stack(list(oof_preds_dict.values()))
     X_meta_test = np.column_stack(list(test_preds_dict.values()))
 
-    meta_model = lgb.LGBMRegressor(random_state=CFG['SEED'], n_jobs=CFG['CPUS'])
-    meta_model.fit(X_meta_train, y)
-    
+    skf = StratifiedKFold(n_splits=CFG['N_SPLITS'], shuffle=True, random_state=CFG['SEED'])
+    meta_oof_preds = np.zeros(len(X_meta_train))
+    final_test_preds = np.zeros(len(X_meta_test))
+
+    for fold, (train_idx, val_idx) in enumerate(skf.split(X, y_bins)):
+        print(f"  Training Meta-Model Fold {fold+1}/{CFG['N_SPLITS']}...")
+        X_meta_train_fold, X_meta_val_fold = X_meta_train[train_idx], X_meta_train[val_idx]
+        y_train_fold, _ = y[train_idx], y[val_idx]
+
+        meta_model = lgb.LGBMRegressor(random_state=CFG['SEED'], n_jobs=CFG['CPUS'])
+        meta_model.fit(X_meta_train_fold, y_train_fold)
+        
+        meta_oof_preds[val_idx] = meta_model.predict(X_meta_val_fold)
+        final_test_preds += meta_model.predict(X_meta_test) / CFG['N_SPLITS']
+
     # 최종 OOF 점수 계산
-    meta_oof_preds = meta_model.predict(X_meta_train)
     meta_y_ic50_true = pIC50_to_IC50(y)
     meta_oof_ic50_preds = pIC50_to_IC50(meta_oof_preds)
     final_cv_score = get_score(meta_y_ic50_true, meta_oof_ic50_preds, y, meta_oof_preds)
-    print(f"  Final Stacking CV Score: {final_cv_score:.4f}")
+    print(f"  Final Stacking CV Score (OOF): {final_cv_score:.4f}")
 
-    final_test_preds = meta_model.predict(X_meta_test)
     final_ic50_preds = pIC50_to_IC50(final_test_preds)
 
     # 5. 제출 파일 생성
@@ -274,7 +284,7 @@ if __name__ == "__main__":
         from dacon_submit import dacon_submit
         dacon_submit(
             submission_path=submission_path,
-            memo=f"try2: Stacking (LGB, CB, ET), CV {final_cv_score:.6f}"
+            memo=f"try2: Stacking (LGB, CB, ET), 5-fold CV {final_cv_score:.6f}"
         )
     except ImportError:
         print("  'dacon_submit' not found. Skipping submission.")
