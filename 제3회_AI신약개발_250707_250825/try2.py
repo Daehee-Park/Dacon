@@ -159,7 +159,7 @@ def create_objective(model_name):
             model = cb.CatBoostRegressor(**params)
         elif model_name == 'et':
             params = {
-                'n_estimators': trial.suggest_int('n_estimators', 100, 2000),
+                'n_estimators': 2000,
                 'max_depth': trial.suggest_int('max_depth', 5, 50),
                 'min_samples_leaf': trial.suggest_int('min_samples_leaf', 1, 10),
                 'min_samples_split': trial.suggest_int('min_samples_split', 2, 20),
