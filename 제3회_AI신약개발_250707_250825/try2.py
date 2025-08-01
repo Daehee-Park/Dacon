@@ -219,7 +219,7 @@ if __name__ == "__main__":
         print(f"\n  Optimizing {model_name.upper()}...")
         objective_fn = create_objective(model_name)
         study = optuna.create_study(direction='maximize', study_name=f'{model_name}_tuning')
-        study.optimize(lambda trial: objective_fn(trial, X, y, y_bins), n_trials=CFG['N_TRIALS'])
+        study.optimize(lambda trial: objective_fn(trial, X, y, y_bins), n_trials=CFG['N_TRIALS'], n_jobs=CFG['CPUS'])
         
         best_params = study.best_params
         print(f"    Best CV score: {study.best_value:.4f}")
