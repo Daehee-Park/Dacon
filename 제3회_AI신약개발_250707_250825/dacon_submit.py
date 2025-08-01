@@ -11,19 +11,23 @@ team_name='팀이름',
 memo='submission 메모 내용' )
 """
 
-####### 수정 필요 #######
-file_path = 'output/try7/submission.csv'
-token = os.getenv('TOKEN')
-cpt_id = os.getenv('COMPETITION_ID')
-team_name = '하품'
-memo = 'Try7-PubChem CatBoost CV 0.8604±0.024, ChEMBL CatBoost 0.7786±0.043, LOSO 0.6651±0.147'
-#####################
+def dacon_submit(submission_path, memo):
+    ####### 수정 필요 #######
+    submission_path = submission_path
+    token = os.getenv('TOKEN')
+    cpt_id = os.getenv('COMPETITION_ID')
+    team_name = '하품'
+    memo = memo
+    #####################
 
-result = dacon_submit_api.post_submission_file(
-    file_path=file_path,
-    token=token,
-    cpt_id=cpt_id,
-    team_name=team_name,
-    memo=memo
-)
-print(f"제출 결과: {result}")
+    try:
+        result = dacon_submit_api.post_submission_file(
+            file_path=submission_path,
+            token=token,
+            cpt_id=cpt_id,
+            team_name=team_name,
+            memo=memo
+        )
+        print(f"제출 성공: {result}")
+    except Exception as e:
+        print(f"제출 오류: {e}")

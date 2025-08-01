@@ -1,6 +1,0 @@
-fold,normalized_rmse,correlation_squared,final_score,best_params
-1,0.11965764425264536,0.331606214563668,0.5511006710371427,"{'n_estimators': 300, 'min_samples_split': 5, 'min_samples_leaf': 4, 'max_features': 'log2', 'max_depth': 10, 'bootstrap': True}"
-2,0.17920625617444524,0.3296765045196214,0.5261234002419948,"{'n_estimators': 300, 'min_samples_split': 5, 'min_samples_leaf': 4, 'max_features': 'log2', 'max_depth': 10, 'bootstrap': True}"
-3,0.09174215389403877,0.3782546054570728,0.5902559017166282,"{'n_estimators': 200, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'log2', 'max_depth': None, 'bootstrap': True}"
-4,0.09607258876111996,0.34127555598197107,0.5663362980847346,"{'n_estimators': 200, 'min_samples_split': 5, 'min_samples_leaf': 4, 'max_features': 'log2', 'max_depth': 30, 'bootstrap': True}"
-5,0.0670152104678699,0.2989312281213296,0.5525526526856499,"{'n_estimators': 200, 'min_samples_split': 10, 'min_samples_leaf': 4, 'max_features': 'log2', 'max_depth': None, 'bootstrap': True}"
