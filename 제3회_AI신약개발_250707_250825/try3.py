@@ -122,7 +122,8 @@ if __name__ == "__main__":
             train_data=train_data, 
             time_limit=3600*8,
             presets='extreme_quality',
-            num_cpus=CFG['CPUS']
+            num_cpus=CFG['CPUS'],
+            memory_limit=256
         )
         
         print("\n3. Processing test data...")
