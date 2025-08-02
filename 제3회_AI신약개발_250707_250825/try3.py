@@ -113,26 +113,31 @@ if __name__ == "__main__":
         train_data['pIC50'] = y_train
 
         print("\n2. Training AutoGluon model...")
-        predictor = TabularPredictor(
-            label='pIC50', 
-            eval_metric=competition_scorer,
-            path=f"{OUTPUT_DIR}/autogluon_models"
-        )
-        predictor.fit(
-            train_data=train_data, 
-            time_limit=3600*8,
-            presets='extreme_quality',
-            num_cpus=CFG['CPUS'],
-            memory_limit=256
-        )
+        model_path = f"{OUTPUT_DIR}/autogluon_models"
+        if os.path.exists(model_path):
+            predictor = TabularPredictor.load(model_path)
+            print(f"Loaded existing model from {model_path}")
+        else:
+            predictor = TabularPredictor(
+                label='pIC50', 
+                eval_metric=competition_scorer,
+                path=f"{OUTPUT_DIR}/autogluon_models"
+            )
+            predictor.fit(
+                train_data=train_data, 
+                time_limit=3600*8,
+                presets='extreme_quality',
+                num_cpus=CFG['CPUS'],
+                memory_limit=256
+            )
         
         print("\n3. Processing test data...")
         test_df = pd.read_csv("./data/test.csv")
         print(f"Test data shape: {test_df.shape}")
         
         # 테스트 데이터 피처 생성
-        test_df['fingerprint'] = test_df['SMILES'].apply(smiles_to_fingerprint)
-        test_df['descriptors'] = test_df['SMILES'].apply(calculate_rdkit_descriptors)
+        test_df['fingerprint'] = test_df['Smiles'].apply(smiles_to_fingerprint)
+        test_df['descriptors'] = test_df['Smiles'].apply(calculate_rdkit_descriptors)
         
         # 유효한 테스트 데이터 마스크 생성
         valid_test_mask = test_df['fingerprint'].notna() & test_df['descriptors'].notna()
