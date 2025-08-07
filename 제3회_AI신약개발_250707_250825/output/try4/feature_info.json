@@ -1,0 +1,18 @@
+{
+  "splits": {
+    "end_morgan_r2": 2048,
+    "end_morgan_r3": 3072,
+    "end_maccs": 3239
+  },
+  "desc_mean_shape": 221,
+  "bounds_log10": {
+    "lower": -2.846980117491272,
+    "upper": 4.5185139398779
+  },
+  "columns": {
+    "X_train": "X_train.csv",
+    "X_test": "X_test.csv",
+    "y_train": "y_train.csv",
+    "test_ids": "test_ids.csv"
+  }
+}
