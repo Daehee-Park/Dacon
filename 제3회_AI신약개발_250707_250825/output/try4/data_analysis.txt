@@ -1,0 +1,25 @@
+# Data Analysis Report (try4)
+
+## Schema
+- chembl shape: [824, 48]
+  columns: ['Molecule ChEMBL ID', 'Molecule Name', 'Molecule Max Phase', 'Molecular Weight', '#RO5 Violations', 'AlogP', 'Compound Key', 'Smiles', 'Standard Type', 'Standard Relation', 'Standard Value', 'Standard Units', 'pChEMBL Value', 'Data Validity Comment', 'Comment', 'Uo Units', 'Ligand Efficiency BEI', 'Ligand Efficiency LE', 'Ligand Efficiency LLE', 'Ligand Efficiency SEI', 'Potential Duplicate', 'Assay ChEMBL ID', 'Assay Description', 'Assay Type', 'BAO Format ID', 'BAO Label', 'Assay Organism', 'Assay Tissue ChEMBL ID', 'Assay Tissue Name', 'Assay Cell Type', 'Assay Subcellular Fraction', 'Assay Parameters', 'Assay Variant Accession', 'Assay Variant Mutation', 'Target ChEMBL ID', 'Target Name', 'Target Organism', 'Target Type', 'Document ChEMBL ID', 'Source ID', 'Source Description', 'Document Journal', 'Document Year', 'Cell ChEMBL ID', 'Properties', 'Action Type', 'Standard Text Value', 'Value']
+- pubchem shape: [23795, 33]
+  columns: ['Bioactivity_ID', 'Activity_Value', 'BioAssay_AID', 'Substance_SID', 'Compound_CID', 'refsid', 'Gene_ID', 'PMID', 'Aid_Type', 'Last_Modified_Date', 'Has_Dose_Response_Curve', 'RNAi_BioAssay', 'Activity', 'Protein_Accession', 'Activity_Type', 'Activity_Qualifier', 'Bioassay_Data_Source', 'BioAssay_Name', 'Compound_Name', 'Target_Name', 'Target_Link', 'ECs', 'Representative_Protein_Accession', 'Taxonomy_ID', 'Cell_ID', 'Target_Taxonomy_ID', 'Anatomy_ID', 'Anatomy', 'dois', 'pmcids', 'pclids', 'citations', 'SMILES']
+- test shape: [127, 2]
+  columns: ['ID', 'Smiles']
+
+## Units (Chembl/Pubchem unified)
+- unit_counts: {'NA': 23807, 'nM': 812}
+
+## Values & SMILES
+- stats: {'n_raw': 1960, 'n_unique_smiles': 988, 'salt_fraction_raw': 0.03877551020408163, 'multi_record_fraction': 0.5546558704453441}
+- distributions (ic50_nM & pIC50 percentiles): {'ic50_nM': {'min': 0.0004, 'p05': 0.00555635, 'p50': 16.69325, 'p95': 9425.422499999962, 'max': 250250.0}, 'pIC50': {'min': 3.601625913848644, 'p05': 5.027257806462978, 'p50': 7.777462073846234, 'p95': 11.255251647619133, 'max': 12.397940008672037}}
+
+## Train/Test Overlap (canonical)
+{'n_test_valid': 127, 'n_overlap': 0, 'overlap_fraction_test': 0.0}
+
+## Descriptors/Fingerprints
+{'descriptor_nan_rate_mean': 0.0, 'descriptor_nan_rate_median': 0.0, 'descriptor_zero_std_fraction': 0.11981566820276497, 'high_corr_pairs_count_thr0_98': 39, 'fp_density': [{'nbits': 256, 'mean_on_bits': 52.39372469635627, 'density': 0.2046629870951417}, {'nbits': 512, 'mean_on_bits': 54.98178137651822, 'density': 0.10738629175101215}, {'nbits': 1024, 'mean_on_bits': 56.586032388663966, 'density': 0.055259797254554655}, {'nbits': 2048, 'mean_on_bits': 57.45748987854251, 'density': 0.028055414979757085}]}
+
+## Recommended Preprocessing
+{"salt_removal": true, "canonicalize": true, "duplicate_aggregation": "median", "unit_handling": "convert_to_nM_if_available_else_as_is", "target_transform": "pIC50 = 9 - log10(nM)", "descriptor_imputation": "mean_by_column", "descriptor_scaler": "StandardScaler", "descriptor_variance_threshold": 1e-10, "descriptor_corr_threshold": 0.98, "fingerprint": {"type": "Morgan(radius=2)", "nbits": 1024}}

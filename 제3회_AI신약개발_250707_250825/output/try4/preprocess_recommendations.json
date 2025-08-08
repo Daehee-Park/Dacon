@@ -1,0 +1,15 @@
+{
+  "salt_removal": true,
+  "canonicalize": true,
+  "duplicate_aggregation": "median",
+  "unit_handling": "convert_to_nM_if_available_else_as_is",
+  "target_transform": "pIC50 = 9 - log10(nM)",
+  "descriptor_imputation": "mean_by_column",
+  "descriptor_scaler": "StandardScaler",
+  "descriptor_variance_threshold": 1e-10,
+  "descriptor_corr_threshold": 0.98,
+  "fingerprint": {
+    "type": "Morgan(radius=2)",
+    "nbits": 1024
+  }
+}

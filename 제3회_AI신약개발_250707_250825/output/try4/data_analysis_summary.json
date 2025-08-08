@@ -1,0 +1,814 @@
+{
+  "schema": {
+    "chembl": {
+      "name": "chembl",
+      "shape": [
+        824,
+        48
+      ],
+      "columns": [
+        "Molecule ChEMBL ID",
+        "Molecule Name",
+        "Molecule Max Phase",
+        "Molecular Weight",
+        "#RO5 Violations",
+        "AlogP",
+        "Compound Key",
+        "Smiles",
+        "Standard Type",
+        "Standard Relation",
+        "Standard Value",
+        "Standard Units",
+        "pChEMBL Value",
+        "Data Validity Comment",
+        "Comment",
+        "Uo Units",
+        "Ligand Efficiency BEI",
+        "Ligand Efficiency LE",
+        "Ligand Efficiency LLE",
+        "Ligand Efficiency SEI",
+        "Potential Duplicate",
+        "Assay ChEMBL ID",
+        "Assay Description",
+        "Assay Type",
+        "BAO Format ID",
+        "BAO Label",
+        "Assay Organism",
+        "Assay Tissue ChEMBL ID",
+        "Assay Tissue Name",
+        "Assay Cell Type",
+        "Assay Subcellular Fraction",
+        "Assay Parameters",
+        "Assay Variant Accession",
+        "Assay Variant Mutation",
+        "Target ChEMBL ID",
+        "Target Name",
+        "Target Organism",
+        "Target Type",
+        "Document ChEMBL ID",
+        "Source ID",
+        "Source Description",
+        "Document Journal",
+        "Document Year",
+        "Cell ChEMBL ID",
+        "Properties",
+        "Action Type",
+        "Standard Text Value",
+        "Value"
+      ],
+      "dtypes": {
+        "Molecule ChEMBL ID": "object",
+        "Molecule Name": "object",
+        "Molecule Max Phase": "float64",
+        "Molecular Weight": "float64",
+        "#RO5 Violations": "int64",
+        "AlogP": "float64",
+        "Compound Key": "object",
+        "Smiles": "object",
+        "Standard Type": "object",
+        "Standard Relation": "object",
+        "Standard Value": "float64",
+        "Standard Units": "object",
+        "pChEMBL Value": "float64",
+        "Data Validity Comment": "object",
+        "Comment": "object",
+        "Uo Units": "object",
+        "Ligand Efficiency BEI": "float64",
+        "Ligand Efficiency LE": "float64",
+        "Ligand Efficiency LLE": "float64",
+        "Ligand Efficiency SEI": "float64",
+        "Potential Duplicate": "int64",
+        "Assay ChEMBL ID": "object",
+        "Assay Description": "object",
+        "Assay Type": "object",
+        "BAO Format ID": "object",
+        "BAO Label": "object",
+        "Assay Organism": "object",
+        "Assay Tissue ChEMBL ID": "float64",
+        "Assay Tissue Name": "float64",
+        "Assay Cell Type": "object",
+        "Assay Subcellular Fraction": "float64",
+        "Assay Parameters": "object",
+        "Assay Variant Accession": "float64",
+        "Assay Variant Mutation": "float64",
+        "Target ChEMBL ID": "object",
+        "Target Name": "object",
+        "Target Organism": "object",
+        "Target Type": "object",
+        "Document ChEMBL ID": "object",
+        "Source ID": "int64",
+        "Source Description": "object",
+        "Document Journal": "object",
+        "Document Year": "int64",
+        "Cell ChEMBL ID": "object",
+        "Properties": "object",
+        "Action Type": "object",
+        "Standard Text Value": "float64",
+        "Value": "float64"
+      },
+      "num_missing": {
+        "Molecule ChEMBL ID": 0,
+        "Molecule Name": 606,
+        "Molecule Max Phase": 620,
+        "Molecular Weight": 0,
+        "#RO5 Violations": 0,
+        "AlogP": 0,
+        "Compound Key": 0,
+        "Smiles": 0,
+        "Standard Type": 0,
+        "Standard Relation": 12,
+        "Standard Value": 12,
+        "Standard Units": 12,
+        "pChEMBL Value": 110,
+        "Data Validity Comment": 823,
+        "Comment": 753,
+        "Uo Units": 12,
+        "Ligand Efficiency BEI": 296,
+        "Ligand Efficiency LE": 296,
+        "Ligand Efficiency LLE": 296,
+        "Ligand Efficiency SEI": 296,
+        "Potential Duplicate": 0,
+        "Assay ChEMBL ID": 0,
+        "Assay Description": 0,
+        "Assay Type": 0,
+        "BAO Format ID": 0,
+        "BAO Label": 0,
+        "Assay Organism": 83,
+        "Assay Tissue ChEMBL ID": 824,
+        "Assay Tissue Name": 824,
+        "Assay Cell Type": 486,
+        "Assay Subcellular Fraction": 824,
+        "Assay Parameters": 629,
+        "Assay Variant Accession": 824,
+        "Assay Variant Mutation": 824,
+        "Target ChEMBL ID": 0,
+        "Target Name": 0,
+        "Target Organism": 0,
+        "Target Type": 0,
+        "Document ChEMBL ID": 0,
+        "Source ID": 0,
+        "Source Description": 0,
+        "Document Journal": 258,
+        "Document Year": 0,
+        "Cell ChEMBL ID": 569,
+        "Properties": 461,
+        "Action Type": 613,
+        "Standard Text Value": 824,
+        "Value": 12
+      },
+      "head": {
+        "Molecule ChEMBL ID": [
+          "CHEMBL3927617",
+          "CHEMBL3330172",
+          "CHEMBL3402498"
+        ],
+        "Molecule Name": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "Molecule Max Phase": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "Molecular Weight": [
+          359.81,
+          336.44,
+          517.05
+        ],
+        "#RO5 Violations": [
+          0,
+          0,
+          2
+        ],
+        "AlogP": [
+          2.68,
+          1.84,
+          7.47
+        ],
+        "Compound Key": [
+          "BDBM128413",
+          "19",
+          "24"
+        ],
+        "Smiles": [
+          "Cn1cc(Cl)c2cnc(NC(=O)c3ccc([C@](C)(O)CO)cc3)cc21",
+          "Cc1cc2c(-c3ccc(S(=O)(=O)NCCN)s3)ccnc2[nH]1",
+          "Cc1cc(C)c2nc(N3C(=O)C(O)=C(C(=O)c4ccc(Cl)cc4)C3c3ccc(C(C)C)cc3)sc2c1"
+        ],
+        "Standard Type": [
+          "IC50",
+          "IC50",
+          "IC50"
+        ],
+        "Standard Relation": [
+          "'='",
+          "'='",
+          "'='"
+        ],
+        "Standard Value": [
+          38.0,
+          251.0,
+          6300.0
+        ],
+        "Standard Units": [
+          "nM",
+          "nM",
+          "nM"
+        ],
+        "pChEMBL Value": [
+          7.42,
+          6.6,
+          5.2
+        ],
+        "Data Validity Comment": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "Comment": [
+          "259344",
+          NaN,
+          NaN
+        ],
+        "Uo Units": [
+          "UO_0000065",
+          "UO_0000065",
+          "UO_0000065"
+        ],
+        "Ligand Efficiency BEI": [
+          20.62,
+          19.62,
+          10.06
+        ],
+        "Ligand Efficiency LE": [
+          0.41,
+          0.41,
+          0.2
+        ],
+        "Ligand Efficiency LLE": [
+          4.74,
+          4.76,
+          -2.27
+        ],
+        "Ligand Efficiency SEI": [
+          8.49,
+          6.54,
+          7.38
+        ],
+        "Potential Duplicate": [
+          0,
+          0,
+          0
+        ],
+        "Assay ChEMBL ID": [
+          "CHEMBL3705948",
+          "CHEMBL3375026",
+          "CHEMBL3405544"
+        ],
+        "Assay Description": [
+          "Homogeneous Time-Resolved Fluorescence Assay: The inhibitory properties of compounds to ASK1 may be determined using a white 384-well-plate format under the following reaction conditions: 25 nM ASK1, 1 uM CisBio STK S3-biotion peptide, 100 uM ATP, and 1%-2% DMSO in kinase assay buffer of 50 mM HEPES, pH 7.3, 10 mM NaCl, 10 mM MgCl2, 0.01% Brij35, 0.2 mM EDTA, and 1 mM DTT. Reaction product is determined quantitatively by HTRF after the addition of detection reagent SA-XL665 and STK-antibody-cryptate.The assay reaction may be initiated as follows: 2 ul of the mixture of 3 uM CisBio STK S3-biotion peptide and 300 uM ATP with 2 ul of test compound (2 fold serial dilutions for 11 data points for each inhibitor) containing 3%-6% DMSO are added to each well of the plate, followed by the addition of 2 uL of 75 nM ASK1 to initiate the reaction (final enzyme concentration was 25 nM for ASK1). The reaction mixture may then be incubated at room temperature for 1 hour, and quenched and developed.",
+          "Inhibition of ASK1 (unknown origin)",
+          "Inhibition of recombinant ASK1 catalytic subunit (unknown origin) using MBP substrate and gamma-labeled 32P ATP incubated for 20 mins by liquid scintillation counting method"
+        ],
+        "Assay Type": [
+          "B",
+          "B",
+          "B"
+        ],
+        "BAO Format ID": [
+          "BAO_0000357",
+          "BAO_0000357",
+          "BAO_0000357"
+        ],
+        "BAO Label": [
+          "single protein format",
+          "single protein format",
+          "single protein format"
+        ],
+        "Assay Organism": [
+          NaN,
+          "Homo sapiens",
+          "Homo sapiens"
+        ],
+        "Assay Tissue ChEMBL ID": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "Assay Tissue Name": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "Assay Cell Type": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "Assay Subcellular Fraction": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "Assay Parameters": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "Assay Variant Accession": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "Assay Variant Mutation": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "Target ChEMBL ID": [
+          "CHEMBL5285",
+          "CHEMBL5285",
+          "CHEMBL5285"
+        ],
+        "Target Name": [
+          "Mitogen-activated protein kinase kinase kinase 5",
+          "Mitogen-activated protein kinase kinase kinase 5",
+          "Mitogen-activated protein kinase kinase kinase 5"
+        ],
+        "Target Organism": [
+          "Homo sapiens",
+          "Homo sapiens",
+          "Homo sapiens"
+        ],
+        "Target Type": [
+          "SINGLE PROTEIN",
+          "SINGLE PROTEIN",
+          "SINGLE PROTEIN"
+        ],
+        "Document ChEMBL ID": [
+          "CHEMBL3639127",
+          "CHEMBL3352072",
+          "CHEMBL3400130"
+        ],
+        "Source ID": [
+          37,
+          1,
+          1
+        ],
+        "Source Description": [
+          "BindingDB Patent Bioactivity Data",
+          "Scientific Literature",
+          "Scientific Literature"
+        ],
+        "Document Journal": [
+          NaN,
+          "Bioorg Med Chem Lett",
+          "Bioorg Med Chem"
+        ],
+        "Document Year": [
+          2014,
+          2014,
+          2015
+        ],
+        "Cell ChEMBL ID": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "Properties": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "Action Type": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "Standard Text Value": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "Value": [
+          38.0,
+          0.251,
+          6.3
+        ]
+      }
+    },
+    "pubchem": {
+      "name": "pubchem",
+      "shape": [
+        23795,
+        33
+      ],
+      "columns": [
+        "Bioactivity_ID",
+        "Activity_Value",
+        "BioAssay_AID",
+        "Substance_SID",
+        "Compound_CID",
+        "refsid",
+        "Gene_ID",
+        "PMID",
+        "Aid_Type",
+        "Last_Modified_Date",
+        "Has_Dose_Response_Curve",
+        "RNAi_BioAssay",
+        "Activity",
+        "Protein_Accession",
+        "Activity_Type",
+        "Activity_Qualifier",
+        "Bioassay_Data_Source",
+        "BioAssay_Name",
+        "Compound_Name",
+        "Target_Name",
+        "Target_Link",
+        "ECs",
+        "Representative_Protein_Accession",
+        "Taxonomy_ID",
+        "Cell_ID",
+        "Target_Taxonomy_ID",
+        "Anatomy_ID",
+        "Anatomy",
+        "dois",
+        "pmcids",
+        "pclids",
+        "citations",
+        "SMILES"
+      ],
+      "dtypes": {
+        "Bioactivity_ID": "int64",
+        "Activity_Value": "float64",
+        "BioAssay_AID": "int64",
+        "Substance_SID": "int64",
+        "Compound_CID": "int64",
+        "refsid": "float64",
+        "Gene_ID": "int64",
+        "PMID": "float64",
+        "Aid_Type": "object",
+        "Last_Modified_Date": "int64",
+        "Has_Dose_Response_Curve": "int64",
+        "RNAi_BioAssay": "int64",
+        "Activity": "object",
+        "Protein_Accession": "object",
+        "Activity_Type": "object",
+        "Activity_Qualifier": "object",
+        "Bioassay_Data_Source": "object",
+        "BioAssay_Name": "object",
+        "Compound_Name": "object",
+        "Target_Name": "object",
+        "Target_Link": "object",
+        "ECs": "object",
+        "Representative_Protein_Accession": "object",
+        "Taxonomy_ID": "int64",
+        "Cell_ID": "float64",
+        "Target_Taxonomy_ID": "float64",
+        "Anatomy_ID": "float64",
+        "Anatomy": "float64",
+        "dois": "object",
+        "pmcids": "object",
+        "pclids": "float64",
+        "citations": "object",
+        "SMILES": "object"
+      },
+      "num_missing": {
+        "Bioactivity_ID": 0,
+        "Activity_Value": 22647,
+        "BioAssay_AID": 0,
+        "Substance_SID": 0,
+        "Compound_CID": 0,
+        "refsid": 23696,
+        "Gene_ID": 0,
+        "PMID": 22582,
+        "Aid_Type": 0,
+        "Last_Modified_Date": 0,
+        "Has_Dose_Response_Curve": 0,
+        "RNAi_BioAssay": 0,
+        "Activity": 0,
+        "Protein_Accession": 0,
+        "Activity_Type": 22617,
+        "Activity_Qualifier": 23163,
+        "Bioassay_Data_Source": 0,
+        "BioAssay_Name": 0,
+        "Compound_Name": 0,
+        "Target_Name": 0,
+        "Target_Link": 0,
+        "ECs": 0,
+        "Representative_Protein_Accession": 0,
+        "Taxonomy_ID": 0,
+        "Cell_ID": 23696,
+        "Target_Taxonomy_ID": 23795,
+        "Anatomy_ID": 23795,
+        "Anatomy": 23795,
+        "dois": 22582,
+        "pmcids": 23645,
+        "pclids": 22582,
+        "citations": 22582,
+        "SMILES": 0
+      },
+      "head": {
+        "Bioactivity_ID": [
+          363645869,
+          363645871,
+          402153100
+        ],
+        "Activity_Value": [
+          0.0001,
+          0.00032,
+          0.0004
+        ],
+        "BioAssay_AID": [
+          1404085,
+          1404085,
+          1798298
+        ],
+        "Substance_SID": [
+          404713175,
+          404710600,
+          315662963
+        ],
+        "Compound_CID": [
+          145990765,
+          145989111,
+          91810341
+        ],
+        "refsid": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "Gene_ID": [
+          4217,
+          4217,
+          4217
+        ],
+        "PMID": [
+          29348070.0,
+          29348070.0,
+          NaN
+        ],
+        "Aid_Type": [
+          "Confirmatory",
+          "Confirmatory",
+          "Confirmatory"
+        ],
+        "Last_Modified_Date": [
+          20220830,
+          20220830,
+          20240109
+        ],
+        "Has_Dose_Response_Curve": [
+          0,
+          0,
+          0
+        ],
+        "RNAi_BioAssay": [
+          0,
+          0,
+          0
+        ],
+        "Activity": [
+          "Active",
+          "Active",
+          "Active"
+        ],
+        "Protein_Accession": [
+          "Q99683",
+          "Q99683",
+          "Q99683"
+        ],
+        "Activity_Type": [
+          "IC50",
+          "IC50",
+          "IC50"
+        ],
+        "Activity_Qualifier": [
+          "=",
+          "=",
+          NaN
+        ],
+        "Bioassay_Data_Source": [
+          "ChEMBL",
+          "ChEMBL",
+          "BindingDB"
+        ],
+        "BioAssay_Name": [
+          "Inhibition of recombinant full length human GST-tagged ASK1 expressed in baculovirus expression system using STK3 peptide substrate preincubated for 15 mins followed by substrate addition measured after 90 mins in presence of 1 mM ATP by HTRF assay",
+          "Inhibition of recombinant full length human GST-tagged ASK1 expressed in baculovirus expression system using STK3 peptide substrate preincubated for 15 mins followed by substrate addition measured after 90 mins in presence of 1 mM ATP by HTRF assay",
+          "Apoptosis Signal-Regulating Kinase Assay from US Patent US9908875: 'Apoptosis signal-regulating kinase inhibitors'"
+        ],
+        "Compound_Name": [
+          "2-methoxy-4-methyl-N-[6-(4-propan-2-yl-1,2,4-triazol-3-yl)pyridin-2-yl]-5-sulfamoylbenzamide",
+          "5-(ethylsulfonylamino)-2-methoxy-N-[6-(4-propan-2-yl-1,2,4-triazol-3-yl)pyridin-2-yl]benzamide",
+          "4-(4-cyclopropylimidazol-1-yl)-N-[2-(4-cyclopropyl-1,2,4-triazol-3-yl)-1,3-thiazol-4-yl]-5-[4-(methylcarbamoyl)piperidin-1-yl]pyridine-2-carboxamide"
+        ],
+        "Target_Name": [
+          "MAP3K5 - mitogen-activated protein kinase kinase kinase 5 (human)",
+          "MAP3K5 - mitogen-activated protein kinase kinase kinase 5 (human)",
+          "MAP3K5 - mitogen-activated protein kinase kinase kinase 5 (human)"
+        ],
+        "Target_Link": [
+          "/gene/4217",
+          "/gene/4217",
+          "/gene/4217"
+        ],
+        "ECs": [
+          "2.7.11.25",
+          "2.7.11.25",
+          "2.7.11.25"
+        ],
+        "Representative_Protein_Accession": [
+          "Q99683",
+          "Q99683",
+          "Q99683"
+        ],
+        "Taxonomy_ID": [
+          9606,
+          9606,
+          9606
+        ],
+        "Cell_ID": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "Target_Taxonomy_ID": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "Anatomy_ID": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "Anatomy": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "dois": [
+          "10.1016/j.ejmech.2017.12.041",
+          "10.1016/j.ejmech.2017.12.041",
+          NaN
+        ],
+        "pmcids": [
+          NaN,
+          NaN,
+          NaN
+        ],
+        "pclids": [
+          29725507.0,
+          29725507.0,
+          NaN
+        ],
+        "citations": [
+          "Lovering F, Morgan P, Allais C, Aulabaugh A, Brodfuehrer J, Chang J, Coe J, Ding W, Dowty H, Fleming M, Frisbie R, Guzova J, Hepworth D, Jasti J, Kortum S, Kurumbail R, Mohan S, Papaioannou N, Strohbach JW, Vincent F, Lee K, Zapf CW. Rational approach to highly potent and selective apoptosis signal-regulating kinase 1 (ASK1) inhibitors. European Journal of Medicinal Chemistry. 2018 Feb;145():606–21. doi: 10.1016/j.ejmech.2017.12.041.",
+          "Lovering F, Morgan P, Allais C, Aulabaugh A, Brodfuehrer J, Chang J, Coe J, Ding W, Dowty H, Fleming M, Frisbie R, Guzova J, Hepworth D, Jasti J, Kortum S, Kurumbail R, Mohan S, Papaioannou N, Strohbach JW, Vincent F, Lee K, Zapf CW. Rational approach to highly potent and selective apoptosis signal-regulating kinase 1 (ASK1) inhibitors. European Journal of Medicinal Chemistry. 2018 Feb;145():606–21. doi: 10.1016/j.ejmech.2017.12.041.",
+          NaN
+        ],
+        "SMILES": [
+          "CC1=CC(=C(C=C1S(=O)(=O)N)C(=O)NC2=CC=CC(=N2)C3=NN=CN3C(C)C)OC",
+          "CCS(=O)(=O)NC1=CC(=C(C=C1)OC)C(=O)NC2=CC=CC(=N2)C3=NN=CN3C(C)C",
+          "CNC(=O)C1CCN(CC1)C2=CN=C(C=C2N3C=C(N=C3)C4CC4)C(=O)NC5=CSC(=N5)C6=NN=CN6C7CC7"
+        ]
+      }
+    },
+    "test": {
+      "name": "test",
+      "shape": [
+        127,
+        2
+      ],
+      "columns": [
+        "ID",
+        "Smiles"
+      ],
+      "dtypes": {
+        "ID": "object",
+        "Smiles": "object"
+      },
+      "num_missing": {
+        "ID": 0,
+        "Smiles": 0
+      },
+      "head": {
+        "ID": [
+          "TEST_000",
+          "TEST_001",
+          "TEST_002"
+        ],
+        "Smiles": [
+          "CC(C)n1cnnc1c2cccc(n2)N3C=Cc4ccc(Br)cc4C3=O",
+          "C[C@H](CO)n1cnnc1c2cccc(n2)N3C=Cc4ccc(Br)cc4C3=O",
+          "C[C@H](CO)n1cnnc1c2cccc(n2)N3C=Cc4cc(Br)ccc4C3=O"
+        ]
+      }
+    }
+  },
+  "units": {
+    "unit_counts": {
+      "NA": 23807,
+      "nM": 812
+    },
+    "by_unit_describe": {
+      "units": [
+        "NA",
+        "nM"
+      ],
+      "count": [
+        1148.0,
+        812.0
+      ],
+      "mean": [
+        8.715402055749129,
+        4005.8116748768475
+      ],
+      "std": [
+        17.833577223950645,
+        19767.835075849427
+      ],
+      "min": [
+        0.0001,
+        0.1
+      ],
+      "25%": [
+        0.09475,
+        29.975
+      ],
+      "50%": [
+        4.1715,
+        183.0
+      ],
+      "75%": [
+        18.12675,
+        1917.25
+      ],
+      "max": [
+        500.0,
+        500000.0
+      ]
+    }
+  },
+  "values_smiles": {
+    "stats": {
+      "n_raw": 1960,
+      "n_unique_smiles": 988,
+      "salt_fraction_raw": 0.03877551020408163,
+      "multi_record_fraction": 0.5546558704453441
+    },
+    "distributions": {
+      "ic50_nM": {
+        "min": 0.0004,
+        "p05": 0.00555635,
+        "p50": 16.69325,
+        "p95": 9425.422499999962,
+        "max": 250250.0
+      },
+      "pIC50": {
+        "min": 3.601625913848644,
+        "p05": 5.027257806462978,
+        "p50": 7.777462073846234,
+        "p95": 11.255251647619133,
+        "max": 12.397940008672037
+      }
+    }
+  },
+  "overlap_train_test": {
+    "n_test_valid": 127,
+    "n_overlap": 0,
+    "overlap_fraction_test": 0.0
+  },
+  "descriptors_fps": {
+    "descriptor_nan_rate_mean": 0.0,
+    "descriptor_nan_rate_median": 0.0,
+    "descriptor_zero_std_fraction": 0.11981566820276497,
+    "high_corr_pairs_count_thr0_98": 39,
+    "fp_density": [
+      {
+        "nbits": 256,
+        "mean_on_bits": 52.39372469635627,
+        "density": 0.2046629870951417
+      },
+      {
+        "nbits": 512,
+        "mean_on_bits": 54.98178137651822,
+        "density": 0.10738629175101215
+      },
+      {
+        "nbits": 1024,
+        "mean_on_bits": 56.586032388663966,
+        "density": 0.055259797254554655
+      },
+      {
+        "nbits": 2048,
+        "mean_on_bits": 57.45748987854251,
+        "density": 0.028055414979757085
+      }
+    ]
+  }
+}
